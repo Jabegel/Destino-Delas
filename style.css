@@ -1,0 +1,41 @@
+.topo {
+  display: flex;
+  align-items: center;
+  background-color: #f3cf8e;
+  padding: 0 40px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* centraliza o menu no espaço disponível */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 30px 25px;
+  text-decoration: none;
+  color: #b4154a;
+  font-weight: bold;
+}
+
+.menu a.ativo {
+  background-color: #f7e8cf;
+}
