@@ -1,41 +1,57 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff7f5;
+}
+
 .topo {
   display: flex;
   align-items: center;
-  background-color: #f3cf8e;
-  padding: 0 40px;
+  justify-content: space-between;
+  background-color: #fff2ef;
+  padding: 10px 40px;
 }
 
-.logo {
-  flex: 0 0 auto;
-  padding: 10px 20px;
+.logo img {
+  height: 60px;
+  width: auto;
 }
 
 .menu {
-  flex: 1;
   display: flex;
-  justify-content: center; /* centraliza o menu no espaço disponível */
+  align-items: center;
 }
 
 .menu ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 24px;
   margin: 0;
   padding: 0;
 }
 
-.menu li {
-  margin: 0;
+.menu a {
+  text-decoration: none;
+  color: #6d0033;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: 0.3s;
 }
 
-.menu a {
-  display: block;
-  padding: 30px 25px;
-  text-decoration: none;
+.menu a:hover {
   color: #b4154a;
+}
+
+/* Estilo específico para o botão "Quero viajar" */
+.menu a.quero-viajar {
+  background-color: #b4154a;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 18px;
   font-weight: bold;
 }
 
-.menu a.ativo {
-  background-color: #f7e8cf;
+.menu a.quero-viajar:hover {
+  background-color: #91103a;
 }
