@@ -1,26 +1,140 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-    <title>Destino Delas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Delas - Viagens</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <header class="topo">
         <div class="logo">
-            <img src="logo.png" alt="Destino Delas">
+            <img src="/Imagens/logo destinos  sem fundo -05 (1).png" alt="Destino Delas">
         </div>
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
-                <li><a class="ativo" href="Viagens.html">Viagens</a></li>
+                <li><a href="Viagens.html">Viagens</a></li>
                 <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Depoimentos.html">Depoimentos</a></li>
-                <li><a href="Quero_Viajar.html">Quero Viajar</a></li>
+                <li><a class="quero-viajar" href="Quero_Viajar.html">Quero viajar</a></li>
             </ul>
         </nav>
     </header>
-    Viagens
+
+    <div class="main-content">
+        <div class="header-section">
+            <h1>Nossas Viagens</h1>
+            <p>Descubra experiências únicas de conexão e aventura em destinos incríveis, pensadas para você.</p>
+        </div>
+
+        <div class="destinos-container">
+
+            <div class="destino-card featured-card">
+                <div class="badge">Primeira Jornada!</div>
+                <img src="/Imagens/chapadaI.jpg" alt="Chapada dos Veadeiros">
+                <div class="content">
+                    <h2>Chapada dos Veadeiros</h2>
+                    <p class="subtitle">Nossa Viagem Inaugural: Aventura e Reconexão!</p>
+                    <p>De 17 a 22 de Março de 2025</p>
+                    <button onclick="toggleDetalhes('chapada1')">Ver detalhes</button>
+                    <div id="detalhes-chapada1" class="detalhes-viagem">
+                        <h3>Cura, natureza e reconexão – uma travessia de volta para si.</h3>
+                        <ul>
+                            <li><strong>Datas:</strong> 17 a 22 de Março de 2025 (6 dias / 5 noites)</li>
+                            <li><strong>Hospedagem:</strong> Em Alto Paraíso com café da manhã.</li>
+                            <li><strong>Transporte:</strong> Para todas as cachoeiras do roteiro.</li>
+                            <li><strong>Guia:</strong> Local especializado.</li>
+                            <li><strong>Alimentação:</strong> Lanche durante as trilhas.</li>
+                            <li><strong>Serviço de Bordo:</strong> Snacks e água mineral.</li>
+                            <li><strong>Segurança:</strong> Seguro viagem incluso.</li>
+                        </ul>
+                        <h4>Locais Explorados:</h4>
+                        <ul class="locais-visitados">
+                            <li>Cachoeira Loquinhas</li>
+                            <li>Pôr do sol no Morro do Buraco</li>
+                            <li>Vale da Lua</li>
+                            <li>Parque Nacional da Chapada dos Veadeiros</li>
+                            <li>Pôr do sol no Bar do Mirante</li>
+                            <li>Cachoeira São Bento</li>
+                            <li>Cachoeiras Almécegas I e II</li>
+                            <li>Pôr do sol na Pura Chapada</li>
+                            <li>Catarata dos Couros</li>
+                            <li>Cachoeira Santa Bárbara</li>
+                            <li>Cachoeira Capivara</li>
+                            <li>Cachoeira dos Cristais</li>
+                        </ul>
+                        <p class="action-text">Veja alguns dos momentos da nossa primeira aventura! <a
+                                href="https://www.instagram.com/p/DHn0eO7ucyA/?igsh=MWV5MzJ0OHp1MmZ6Yg=="
+                                target="_blank" class="link-galeria">Veja a galeria de fotos!</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destino-card">
+                <div class="badge">Próxima Jornada!</div>
+                <img src="/Imagens/cachoeira-da-capivara.jpg" alt="Chapada dos Veadeiros II">
+                <div class="content">
+                    <h2>Chapada dos Veadeiros II</h2>
+                    <p class="subtitle">Uma nova jornada de cura, natureza e reconexão!</p>
+                    <p>Agosto/2025</p>
+                    <button onclick="toggleDetalhes('chapada2')">Quero saber mais</button>
+                    <div id="detalhes-chapada2" class="detalhes-viagem">
+                        <h3>Prepare-se para uma nova imersão na Chapada dos Veadeiros!</h3>
+                        <p>Devido ao sucesso da nossa primeira viagem, estamos preparando uma nova edição para você se
+                            reconectar com a natureza exuberante do cerrado e consigo mesma.</p>
+                        <p><strong>Para datas exatas e detalhes do novo roteiro</strong></p>
+                        <p> <a href="Quero_Viajar.html" class="link-quero-viajar">Clique Aqui!</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destino-card">
+                <div class="img-overlay">
+                    Em Breve
+                </div>
+                <div class="content">
+                    <h2>Jalapão</h2>
+                    <p class="subtitle">Aventura e Renascimento no Coração do Brasil!</p>
+                    <p>Setembro/2025</p>
+                    <button disabled>Em Breve</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function toggleDetalhes(id) {
+            const detalhesDiv = document.getElementById(`detalhes-${id}`);
+            // Remove a classe 'show' de todos os outros detalhes antes de adicionar ao clicado
+            document.querySelectorAll('.detalhes-viagem.show').forEach(div => {
+                if (div.id !== `detalhes-${id}`) {
+                    div.classList.remove('show');
+                }
+            });
+            detalhesDiv.classList.toggle('show');
+        }
+    </script>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2025 Destinos Delas. Todos os direitos reservados.</p>
+            <div class="redes-sociais">
+                <a href="https://api.whatsapp.com/send/?phone=556195109211&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKomk1leHRuA2FlbQIxMAABp3bjokME7H6Dt5z-pnX3zi9ZnXSh-fK72OedSqUTqEo4JOXWRW9OAj7st68__aem_2taL6wrGZSwbhSf1gGqQlw"
+                    target="_blank" aria-label="Entre em contato pelo WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/destinosdelas?igsh=MTc1cWxpdmNtNGZlYg==" target="_blank"
+                    aria-label="Siga-nos no Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

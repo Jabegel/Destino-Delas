@@ -1,14 +1,15 @@
 <html>
 
 <head>
-    <title>Destino Delas</title>
+    <title>Destinos Delas - Viagens</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <header class="topo">
         <div class="logo">
-            <img src="logo.png" alt="Destino Delas">
+            <img src="/Imagens/logo destinos  sem fundo -05 (1).png" alt="Destino Delas">
         </div>
         <nav class="menu">
             <ul>
@@ -16,12 +17,99 @@
                 <li><a href="Viagens.html">Viagens</a></li>
                 <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Depoimentos.html">Depoimentos</a></li>
-                <li><a class="ativo" href="Quero_Viajar.html">Quero Viajar</a></li>
+                <li><a class="quero-viajar" href="Quero_Viajar.html">Quero viajar</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="main-content">
+        <div class="header-section">
+            <h1>Destinos Delas</h1>
+        </div>
+
+        <div class="destinos-container">
+
+            <div class="destino-card">
+                <img src="/Imagens/chapada-dos-veadeiros-brasilia-capa1-820x458.jpg" alt="Chapada dos Veadeiros">
+                <div class="content">
+                    <h2>Chapada dos Veadeiros II</h2>
+                    <p>Agosto/2025</p>
+                    <button onclick="toggleDetalhes('chapada')">Quero saber mais</button>
+                    <div id="detalhes-chapada" class="detalhes-viagem">
+                        <h3>Cura, natureza e reconexão – uma travessia de volta para si.</h3>
+                        <ul>
+                            <li><strong>Destino:</strong> Chapada dos Veadeiros</li>
+                            <li><strong>Data:</strong> 22 a 27 de agosto de 2025</li>
+                            <li><strong>Vagas:</strong> Limitadas (máx. 10 mulheres)</li>
+                            <li><strong>Investimento:</strong> R$ xxxx (ou 10x de xxx)</li>
+                            <li><strong>Incluído:</strong> Hospedagem, passeios, transporte local, guia, vivências, kit
+                                viajante</li>
+                            <li><strong>Não Incluído:</strong> Passagem até Brasília, alimentação fora do roteiro</li>
+                        </ul>
+                    </div>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211&text=Quero+informa%C3%A7%C3%B5es+sobre+a%202%C2%AA%20edi%C3%A7%C3%A3o+para+a+Chapada%20dos%20Veadeiros&type=phone_number&app_absent=0&fbclid=PAQ0xDSwKoiktleHRuA2FlbQIxMAABp18IeKmsbUj0RnW6whr15QbTHcUywM4uYME52iqtoZyIqcpazLWrjUJwyPXV_aem_cE_k3O6uYlL2_Nda_qBmPA"
+                        target="_blank" class="community-button">QUERO VIAJAR</a>
+                </div>
+            </div>
+
+            <div class="destino-card">
+                <img src="/Imagens/jalapao.jpg" alt="Jalapão">
+                <div class="content">
+                    <h2>Jalapão</h2>
+                    <p>Setembro/2025</p>
+                    <button onclick="toggleDetalhes('jalapao')">Quero saber mais</button>
+                    <div id="detalhes-jalapao" class="detalhes-viagem">
+                        <p>Detalhes sobre a viagem para Jalapão em breve!</p>
+                    </div>
+                    <a href="" class="community-button">EM BREVE</a>
+                </div>
+            </div>
+
+            <div class="destino-card">
+                <div class="img-overlay">
+                    Em Breve
+                </div>
+                <div class="content">
+                    <h2>Morro de SP + Salvador</h2>
+                    <p>Dezembro/2025</p>
+                    <button disabled>Em Breve</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleDetalhes(id) {
+            const detalhesDiv = document.getElementById(`detalhes-${id}`);
+            detalhesDiv.classList.toggle('show');
+        }
+    </script>
+
+    </div>
+    <section class="community-callout">
+        <p>Não encontrou a viagem que queria?</p>
+        <h2>Junte-se à nossa comunidade!</h2>
+        <p>Acompanhe as próximas viagens e compartilhe suas ideias com outras viajantes.</p>
+        <a href="https://chat.whatsapp.com/DDGx9Z06UM9BDrThxVDOlC?fbclid=PAQ0xDSwKohttleHRuA2FlbQIxMAABp62Zdlil5XDChapp0zhxp-FMvEiWFm0HOrbJSmGtY6_Y2OFUjtY2Ln9imOhA_aem_Q7qN8EoSlDgxJv8cHVEmdw"
+            target="_blank" class="community-button">Entrar na Comunidade</a>
+    </section>
+    </div>
+        <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2025 Destinos Delas. Todos os direitos reservados.</p>
+            <div class="redes-sociais">
+                <a href="https://api.whatsapp.com/send/?phone=556195109211&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKomk1leHRuA2FlbQIxMAABp3bjokME7H6Dt5z-pnX3zi9ZnXSh-fK72OedSqUTqEo4JOXWRW9OAj7st68__aem_2taL6wrGZSwbhSf1gGqQlw"
+                    target="_blank" aria-label="Entre em contato pelo WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/destinosdelas?igsh=MTc1cWxpdmNtNGZlYg==" target="_blank"
+                    aria-label="Siga-nos no Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
-QUERO VIAJAR
 
 </html>
