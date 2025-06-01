@@ -1,22 +1,51 @@
-/* Seu CSS Existente... */
-/* Reset básico e fonte */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #fff2ef;
-    color: #4a2e3e;
+    background-color: #fff2ef; /* Cor de fundo principal */
+    color: #4a2e3e; /* Cor de texto padrão */
     line-height: 1.6;
 }
 
-/* Cabeçalho topo */
+/* VARIÁVEIS CSS (PALETA DE CORES) */
+:root {
+    --cor-fundo-claro: #fff2ef;
+    --cor-fundo-section: #fff;
+    --cor-fundo-card: #fdf6f9;
+
+    --cor-primaria: #b4154a; /* Vermelho mais forte, botões de ação */
+    --cor-primaria-hover: #91103a; /* Vermelho mais escuro no hover */
+
+    --cor-secundaria: #6d0033; /* Roxo escuro, texto de menu, títulos de card */
+    --cor-terciaria: #b03a2e; /* Marrom avermelhado, títulos de seção, linha do tempo */
+    --cor-quaternaria: #884ea0; /* Roxo médio, títulos dentro da timeline */
+    --cor-quinto: #8c4b5f; /* Roxo acinzentado, subtítulos, datas */
+
+    --cor-texto-principal: #4a2e3e; /* Texto geral */
+    --cor-texto-destaque: #952215; /* Frase final no "Sobre" */
+    --cor-texto-card-link: #5b2f4f; /* Texto de parágrafos na timeline */
+
+    --cor-borda-clara: #f0e0d0; /* Borda leve para cards e seções */
+
+    --shadow-leve: 0 2px 8px rgba(176, 58, 46, 0.15);
+    --shadow-media: 0 4px 14px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --shadow-button: 0 4px 8px rgba(180, 21, 74, 0.4);
+    --shadow-button-hover: 0 6px 12px rgba(145, 16, 58, 0.6);
+    --shadow-timeline: 0 4px 20px rgba(176, 58, 46, 0.1);
+    --shadow-timeline-item-hover: 0 12px 30px rgba(176, 58, 46, 0.35);
+}
+
+/* CABEÇALHO (TOPO)           */
 .topo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff2ef;
+    background-color: var(--cor-fundo-claro);
     padding: 10px 40px;
     height: 110px;
-    box-shadow: 0 2px 8px rgb(176 58 46 / 15%);
+    box-shadow: var(--shadow-leve);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,7 +69,8 @@ body {
     transform: scale(1.05);
 }
 
-/* Menu de navegação */
+
+/* MENU DE NAVEGAÇÃO          */
 .menu {
     display: flex;
     align-items: center;
@@ -56,7 +86,7 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #6d0033;
+    color: var(--cor-secundaria);
     font-weight: 600;
     font-size: 16px;
     padding: 8px 12px;
@@ -65,657 +95,41 @@ body {
 }
 
 .menu a:hover {
-    color: #b4154a;
+    color: var(--cor-primaria);
     font-size: 18px;
-    background-color: #f9dde1;
-}
-
-.menu a.quero-viajar {
-    background-color: #b4154a;
-    color: white;
-    padding: 10px 20px;
-    font-weight: 700;
-    box-shadow: 0 4px 8px rgb(180 21 74 / 40%);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu a.quero-viajar:hover {
-    background-color: #91103a;
-    box-shadow: 0 6px 12px rgb(145 16 58 / 60%);
-}
-
-/* Seção Sobre */
-#sobre {
-    max-width: 800px;
-    margin: 3rem auto 2rem auto;
-    padding: 2rem;
-    color: #57253a;
-    font-size: 1rem;
-    
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f0e0d0;
-
-    text-align: center; /* Centraliza TODO o conteúdo de texto da seção */
-}
-
-#sobre h2 {
-    color: #b03a2e;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    /* text-align: center;  Não precisa mais aqui, pois o pai já centraliza */
-}
-
-#sobre p {
-    margin-bottom: 1.2rem;
-    /* text-align: left;  Remova isso se quiser centralizar tudo */
-}
-
-#sobre p strong {
-    /* display: block; */ /* Pode remover se não quiser quebrar a linha */
-    /* text-align: center; */ /* Não precisa mais aqui */
-}
-
-#sobre .frase-final {
-    font-weight: 700;
-    color: #952215;
-    /* text-align: center; */ /* Não precisa mais aqui */
-}
-
-
-/* Linha Cronológica / Timeline */
-.timeline-section {
-    padding: 3rem 1rem 4rem 1rem;
-    max-width: 800px;
-    margin: 0 auto 4rem auto;
-    font-family: 'Arial', sans-serif;
-    color: #4a2e3e;
-}
-
-.timeline-section h2 {
-    font-size: 2.5rem;
-    color: #b03a2e;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
-}
-
-.timeline-section p {
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    color: #6d0033;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-/* Timeline container */
-.timeline {
-    position: relative;
-    margin: 2rem 0;
-    padding-left: 2.5rem;
-    border-left: 4px solid #b03a2e;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgb(176, 58, 46 / 10%);
-}
-
-/* Gradient line behind timeline */
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -7px;
-    height: 100%;
-    width: 14px;
-    background: linear-gradient(180deg, #b03a2e 0%, #884ea0 100%);
-    z-index: -1;
-    animation: grow-line 1.5s ease-out forwards;
-    border-radius: 8px;
-}
-
-@keyframes grow-line {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* Each timeline item */
-.timeline-item {
-    margin-bottom: 2.8rem;
-    position: relative;
-    padding-left: 1.2rem;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.6s forwards;
-    animation-delay: 0.3s;
-}
-
-.timeline-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.timeline-item:nth-child(2) {
-    animation-delay: 0.25s;
-}
-
-.timeline-item:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.timeline-item:nth-child(4) {
-    animation-delay: 0.55s;
-}
-
-.timeline-item:nth-child(5) {
-    animation-delay: 0.7s;
-}
-
-.timeline-item:nth-child(6) {
-    animation-delay: 0.85s;
-}
-
-.timeline-item:nth-child(7) {
-    animation-delay: 1s;
-}
-
-.timeline-item:nth-child(8) {
-    animation-delay: 1.15s;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Circle bullet point */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -32px;
-    top: 12px;
-    width: 22px;
-    height: 22px;
-    background-color: #b03a2e;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0 6px 3px rgba(176, 58, 46, 0.4);
-    animation: pulse 1.3s infinite;
-    transition: box-shadow 0.3s ease;
-    cursor: default;
-}
-
-.timeline-item:hover::before {
-    box-shadow: 0 0 12px 5px rgba(176, 58, 46, 0.7);
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(176, 58, 46, 0.5);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(176, 58, 46, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(176, 58, 46, 0);
-    }
-}
-
-/* Timeline icon */
-.timeline-icon {
-    font-size: 28px;
-    margin-bottom: 8px;
-    transition: transform 0.3s ease;
-    cursor: default;
-    user-select: none;
-}
-
-.timeline-icon:hover {
-    transform: scale(1.3);
-}
-
-/* Timeline content box */
-.timeline-content {
-    background: #fdf6f9;
-    padding: 1.2rem 1.4rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
-    user-select: text;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(176, 58, 46, 0.35);
-}
-
-.timeline-content h3 {
-    margin-top: 0;
-    color: #884ea0;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.03em;
-    user-select: text;
-}
-
-.timeline-content p {
-    margin: 0;
-    font-size: 1rem;
-    color: #5b2f4f;
-    user-select: text;
-}
-
-.depoimentos-section {
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-    padding: 1rem 1rem 2rem 1rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    color: #4a2e3e;
-}
-
-.depoimentos-section h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #b03a2e;
-    text-align: center;
-}
-
-.comentario {
-    max-width: 700px;
-    margin: 0 auto 1.2rem auto;
-    padding: 1rem;
-    background: #fdf6f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(180, 21, 74, 0.1);
-}
-
-.comentario:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-.comentario:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.comentario:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.comentario:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.comentario:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.comentario:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.comentario:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-/* A keyframe fadeInUp já está definida no seu CSS */
-/* @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
-
-.comentario p {
-    margin: 0;
-    color: #4a2e3e;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* --- Novas Estilos para a seção de Destinos (atualizados para CSS puro) --- */
-
-/* --- Novas Estilos para a seção de Destinos --- */
-
-.main-content {
-    padding-top: 20px; /* Adiciona um padding no topo para separar do cabeçalho fixo */
-    background-color: #fff2ef; /* Cor de fundo para toda a seção de destinos */
-}
-
-.header-section {
-    text-align: center;
-    padding: 40px 20px 20px 20px; /* Ajuste o padding para centralizar o título */
-}
-
-.header-section h1 {
-    font-size: 2.5em;
-    color: #b03a2e; /* Cor do título para combinar com a sua paleta */
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
-}
-
-.destinos-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px 20px 60px 20px; /* Padding ajustado para a parte inferior */
-    max-width: 1200px; /* Limita a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container */
-}
-
-.destino-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid #f0e0d0; /* Borda leve para os cards */
-}
-
-.destino-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
-}
-
-.destino-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.destino-card .content {
-    padding: 20px;
-}
-
-.destino-card h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-    color: #6d0033; /* Cor do título do card */
-    margin-bottom: 10px;
-}
-
-.destino-card p {
-    color: #8c4b5f; /* Cor do texto da data */
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.destino-card button {
-    background-color: #b4154a; /* Cor do botão para combinar com o 'quero-viajar' */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 700;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgb(180 21 74 / 40%);
-}
-
-.destino-card button:hover:not([disabled]) { /* Não aplica hover se o botão estiver desabilitado */
-    background-color: #91103a;
-    box-shadow: 0 6px 12px rgb(145 16 58 / 60%);
-}
-
-.destino-card button[disabled] {
-    background-color: #cccccc;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.detalhes-viagem {
-    background-color: #fdf6f9; /* Cor de fundo para os detalhes */
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    text-align: left;
-    display: none; /* Escondido por padrão */
-    border: 1px solid #f0e0d0;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra interna */
-}
-
-.detalhes-viagem.show {
-    display: block; /* Mostra quando a classe 'show' é adicionada */
-}
-
-.detalhes-viagem h3 {
-    color: #b03a2e; /* Cor do título dos detalhes */
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-}
-
-.detalhes-viagem ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.detalhes-viagem ul li {
-    margin-bottom: 8px;
-    color: #4a2e3e; /* Cor do texto dos itens */
-    font-size: 0.95em;
-}
-
-.detalhes-viagem ul li strong {
-    color: #6d0033; /* Cor dos textos em negrito */
-}
-
-/* Estilo para imagem com filtro de cor sólida "Em Breve" */
-.img-overlay {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-color: #8c4b5f; /* Cor sólida como overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.8em;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsividade para a seção de destinos */
-@media (max-width: 768px) {
-    .destinos-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .destino-card {
-        width: 90%; /* Ocupa mais largura em telas menores */
-        max-width: 350px; /* Limita a largura máxima do card em telas pequenas */
-    }
-}
-
-/* Estilos para a nova seção de Chamada da Comunidade */
-.community-callout {
-    background-color: #fde7eb; /* Um tom mais claro da sua paleta */
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 40px; /* Espaço acima da seção */
-    border-top: 1px solid #b03a2e; /* Uma linha para separar */
-    border-bottom: 1px solid #b03a2e;
-    color: #4a2e3e;
-    font-size: 1.1em;
-}
-
-.community-callout h2 {
-    font-size: 2.5em;
-    color: #b03a2e;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
-}
-
-.community-callout p {
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-    line-height: 1.8;
-}
-
-.community-button {
-    background-color: #b4154a; /* Mesma cor do botão "Quero viajar" */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px; /* Ligeiramente mais arredondado */
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1em;
-    display: inline-block; /* Para o padding e margens funcionarem */
-    margin-top: 20px;
-    box-shadow: 0 6px 12px rgb(180 21 74 / 50%); /* Sombra mais forte */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.community-button:hover {
-    background-color: #91103a;
-    box-shadow: 0 8px 16px rgb(145 16 58 / 70%);
-    transform: translateY(-2px); /* Efeito de leve levantamento */
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 640px) {
-    /* Seu CSS Responsivo Existente... */
-
-    .community-callout {
-        padding: 40px 15px; /* Menos padding em telas pequenas */
-    }
-
-    .community-callout h2 {
-        font-size: 1.8em; /* Fonte menor em telas pequenas */
-    }
-
-    .community-button {
-        padding: 12px 25px; /* Botão menor em telas pequenas */
-        font-size: 1em;
-    }
-}
-
-/* Reset básico e fonte */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff2ef;
-    color: #4a2e3e;
-    line-height: 1.6;
-}
-
-/* Cabeçalho topo */
-.topo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff2ef;
-    padding: 10px 40px;
-    height: 110px;
-    box-shadow: 0 2px 8px rgb(176 58 46 / 15%);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.logo img {
-    height: 250px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-/* Menu de navegação */
-.menu {
-    display: flex;
-    align-items: center;
-}
-
-.menu ul {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #6d0033;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.menu a:hover {
-    color: #b4154a;
-    font-size: 18px;
-    background-color: #f9dde1;
+    background-color: #f9dde1; /* Um tom mais claro baseado na cor primária */
 }
 
 /* ESTILO DO BOTÃO "QUERO VIAJAR" NO MENU */
 .menu a.quero-viajar {
-    background-color: #b4154a;
+    background-color: var(--cor-primaria);
     color: white;
     padding: 10px 20px;
     font-weight: 700;
-    box-shadow: 0 4px 8px rgb(180 21 74 / 40%);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 6px;
+    box-shadow: var(--shadow-button);
 }
 
 .menu a.quero-viajar:hover {
-    background-color: #91103a;
-    box-shadow: 0 6px 12px rgb(145 16 58 / 60%);
+    background-color: var(--cor-primaria-hover);
+    box-shadow: var(--shadow-button-hover);
 }
 
-/* Seção Sobre */
+/* SEÇÃO "SOBRE" (INDEX.HTML) */
 #sobre {
     max-width: 800px;
-    margin: 3rem auto 2rem auto;
+    margin: 3rem auto 3rem auto; /* Ajustado para dar mais respiro antes do rodapé */
     padding: 2rem;
-    color: #57253a;
+    color: var(--cor-texto-principal);
     font-size: 1rem;
+    background-color: var(--cor-fundo-section);
+    border-radius: 12px;
+    box-shadow: var(--shadow-media);
+    border: 1px solid var(--cor-borda-clara);
+    text-align: center; /* Centraliza TODO o conteúdo de texto da seção */
 }
 
 #sobre h2 {
-    color: #b03a2e;
+    color: var(--cor-terciaria);
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -725,23 +139,29 @@ body {
     margin-bottom: 1.2rem;
 }
 
-#sobre .frase-final {
-    font-weight: 700;
-    color: #952215;
+#sobre p strong {
+    font-weight: 700; /* Garante que o strong mantenha o negrito */
+    color: var(--cor-secundaria); /* Pode dar um destaque de cor aqui se desejar */
 }
 
-/* Linha Cronológica / Timeline */
+#sobre .frase-final {
+    font-weight: 700;
+    color: var(--cor-texto-destaque);
+    margin-top: 2rem; /* Adicionado para dar mais espaçamento antes da frase final */
+}
+
+
+/* SEÇÃO "COMO FUNCIONA" (TIMELINE) */
 .timeline-section {
     padding: 3rem 1rem 4rem 1rem;
     max-width: 800px;
     margin: 0 auto 4rem auto;
-    font-family: 'Arial', sans-serif;
-    color: #4a2e3e;
+    color: var(--cor-texto-principal);
 }
 
 .timeline-section h2 {
     font-size: 2.5rem;
-    color: #b03a2e;
+    color: var(--cor-terciaria);
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -751,7 +171,7 @@ body {
 .timeline-section p {
     max-width: 600px;
     margin: 0 auto 40px auto;
-    color: #6d0033;
+    color: var(--cor-secundaria);
     font-weight: 600;
     font-size: 1.1rem;
     text-align: center;
@@ -762,10 +182,10 @@ body {
     position: relative;
     margin: 2rem 0;
     padding-left: 2.5rem;
-    border-left: 4px solid #b03a2e;
+    border-left: 4px solid var(--cor-terciaria);
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgb(176, 58, 46 / 10%);
+    box-shadow: var(--shadow-timeline);
 }
 
 /* Gradient line behind timeline */
@@ -776,7 +196,7 @@ body {
     left: -7px;
     height: 100%;
     width: 14px;
-    background: linear-gradient(180deg, #b03a2e 0%, #884ea0 100%);
+    background: linear-gradient(180deg, var(--cor-terciaria) 0%, var(--cor-quaternaria) 100%);
     z-index: -1;
     animation: grow-line 1.5s ease-out forwards;
     border-radius: 8px;
@@ -786,7 +206,6 @@ body {
     from {
         height: 0;
     }
-
     to {
         height: 100%;
     }
@@ -800,40 +219,17 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.6s forwards;
-    animation-delay: 0.3s;
+    /* Delays para cada item serão definidos individualmente no CSS */
 }
 
-.timeline-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.timeline-item:nth-child(2) {
-    animation-delay: 0.25s;
-}
-
-.timeline-item:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.timeline-item:nth-child(4) {
-    animation-delay: 0.55s;
-}
-
-.timeline-item:nth-child(5) {
-    animation-delay: 0.7s;
-}
-
-.timeline-item:nth-child(6) {
-    animation-delay: 0.85s;
-}
-
-.timeline-item:nth-child(7) {
-    animation-delay: 1s;
-}
-
-.timeline-item:nth-child(8) {
-    animation-delay: 1.15s;
-}
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.25s; }
+.timeline-item:nth-child(3) { animation-delay: 0.4s; }
+.timeline-item:nth-child(4) { animation-delay: 0.55s; }
+.timeline-item:nth-child(5) { animation-delay: 0.7s; }
+.timeline-item:nth-child(6) { animation-delay: 0.85s; }
+.timeline-item:nth-child(7) { animation-delay: 1s; }
+.timeline-item:nth-child(8) { animation-delay: 1.15s; }
 
 @keyframes fadeInUp {
     to {
@@ -850,7 +246,7 @@ body {
     top: 12px;
     width: 22px;
     height: 22px;
-    background-color: #b03a2e;
+    background-color: var(--cor-terciaria);
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 0 0 6px 3px rgba(176, 58, 46, 0.4);
@@ -864,17 +260,9 @@ body {
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(176, 58, 46, 0.5);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(176, 58, 46, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(176, 58, 46, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(176, 58, 46, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(176, 58, 46, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(176, 58, 46, 0); }
 }
 
 /* Timeline icon */
@@ -892,7 +280,7 @@ body {
 
 /* Timeline content box */
 .timeline-content {
-    background: #fdf6f9;
+    background: var(--cor-fundo-card);
     padding: 1.2rem 1.4rem;
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
@@ -903,12 +291,12 @@ body {
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(176, 58, 46, 0.35);
+    box-shadow: var(--shadow-timeline-item-hover);
 }
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #884ea0;
+    color: var(--cor-quaternaria);
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
@@ -919,25 +307,27 @@ body {
 .timeline-content p {
     margin: 0;
     font-size: 1rem;
-    color: #5b2f4f;
+    color: var(--cor-texto-card-link);
     user-select: text;
 }
 
+
+/* SEÇÃO "DEPOIMENTOS"         */
 .depoimentos-section {
     max-width: 800px;
     margin: 0 auto 2rem auto;
     padding: 1rem 1rem 2rem 1rem;
-    background: #fff;
+    background: var(--cor-fundo-section);
     border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    color: #4a2e3e;
+    box-shadow: var(--shadow-media);
+    color: var(--cor-texto-principal);
 }
 
 .depoimentos-section h2 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 2rem;
-    color: #b03a2e;
+    color: var(--cor-terciaria);
     text-align: center;
 }
 
@@ -945,9 +335,13 @@ body {
     max-width: 700px;
     margin: 0 auto 1.2rem auto;
     padding: 1rem;
-    background: #fdf6f9;
+    background: var(--cor-fundo-card);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(180, 21, 74, 0.1);
+    /* Adicionando animação para os depoimentos */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
 }
 
 .comentario:hover {
@@ -955,42 +349,26 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.comentario:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.comentario:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.comentario:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.comentario:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.comentario:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.comentario:nth-child(6) {
-    animation-delay: 0.6s;
-}
+/* Delays para cada depoimento */
+.comentario:nth-child(1) { animation-delay: 0.1s; }
+.comentario:nth-child(2) { animation-delay: 0.2s; }
+.comentario:nth-child(3) { animation-delay: 0.3s; }
+.comentario:nth-child(4) { animation-delay: 0.4s; }
+.comentario:nth-child(5) { animation-delay: 0.5s; }
+.comentario:nth-child(6) { animation-delay: 0.6s; }
 
 .comentario p {
     margin: 0;
     font-size: 1rem;
-    color: #4a2e3e;
+    color: var(--cor-texto-principal);
     line-height: 1.5;
 }
 
-/* --- ESTILOS PARA A SEÇÃO DE VIAGENS --- */
 
+/* SEÇÕES DE VIAGENS E QUERO VIAJAR */
 .main-content {
     padding-top: 20px;
-    background-color: #fff2ef;
+    background-color: var(--cor-fundo-claro);
 }
 
 .header-section {
@@ -1000,7 +378,7 @@ body {
 
 .header-section h1 {
     font-size: 2.5em;
-    color: #b03a2e;
+    color: var(--cor-terciaria);
     font-weight: 700;
     margin-bottom: 10px;
     text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
@@ -1008,7 +386,7 @@ body {
 
 .header-section p {
     font-size: 1.1em;
-    color: #6d0033;
+    color: var(--cor-secundaria);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -1024,28 +402,28 @@ body {
 }
 
 .destino-card {
-    background-color: #fff;
+    background-color: var(--cor-fundo-section);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-card);
     overflow: hidden;
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid #f0e0d0;
+    border: 1px solid var(--cor-borda-clara);
     position: relative;
 }
 
 .destino-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-card-hover);
 }
 
 /* Estilo para o card de destaque */
 .featured-card {
     box-shadow: 0 8px 20px rgba(180, 21, 74, 0.2);
-    border: 2px solid #b4154a;
+    border: 2px solid var(--cor-primaria);
     transform: scale(1.03);
-    order: -1;
+    order: -1; /* Mantém o card de destaque no início */
 }
 
 .featured-card:hover {
@@ -1057,7 +435,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: #b03a2e;
+    background-color: var(--cor-terciaria);
     color: white;
     padding: 5px 12px;
     border-radius: 20px;
@@ -1067,7 +445,6 @@ body {
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
 
 .destino-card img {
     width: 100%;
@@ -1083,42 +460,42 @@ body {
 .destino-card h2 {
     font-size: 1.5em;
     margin-top: 0;
-    color: #6d0033;
+    color: var(--cor-secundaria);
     margin-bottom: 5px;
 }
 
 .destino-card .subtitle {
     font-size: 0.9em;
-    color: #8c4b5f;
+    color: var(--cor-quinto);
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 .destino-card p {
-    color: #8c4b5f;
+    color: var(--cor-quinto);
     margin-bottom: 20px;
     font-weight: 600;
 }
 
 /* === ESTILO DO BOTÃO DE "QUERO SABER MAIS" / "VER DETALHES" (com JS) === */
-.destino-card button { /* Revertemos para estilo de botão genérico no card */
-    background-color: #b4154a;
+.destino-card button {
+    background-color: var(--cor-primaria);
     color: white;
-    border: none; /* remove borda padrão do botão */
+    border: none;
     padding: 10px 20px;
-    border-radius: 6px; /* igual ao do menu */
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1em;
     font-weight: 700;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgb(180 21 74 / 40%);
-    display: inline-block; /* para consistência de tamanho */
-    margin-bottom: 10px; /* espaço entre o botão e os detalhes */
+    box-shadow: var(--shadow-button);
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .destino-card button:hover:not([disabled]) {
-    background-color: #91103a;
-    box-shadow: 0 6px 12px rgb(145 16 58 / 60%);
+    background-color: var(--cor-primaria-hover);
+    box-shadow: var(--shadow-button-hover);
 }
 
 /* Estilo para o botão desabilitado "Em Breve" */
@@ -1129,19 +506,17 @@ body {
     box-shadow: none;
 }
 
-
 .detalhes-viagem {
-    background-color: #fdf6f9;
+    background-color: var(--cor-fundo-card);
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
     text-align: left;
-    /* Com JS, usamos display none/block e max-height para transição */
     display: none; /* Escondido por padrão */
     opacity: 0; /* Começa invisível para transição */
     transform: translateY(10px); /* Ligeiramente para baixo para efeito */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transição suave */
-    border: 1px solid #f0e0d0;
+    border: 1px solid var(--cor-borda-clara);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -1151,14 +526,26 @@ body {
     transform: translateY(0); /* Volta à posição original */
 }
 
+.detalhes-viagem h3 {
+    color: var(--cor-terciaria);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.detalhes-viagem ul {
+    list-style: none; /* Remove o estilo de lista padrão */
+    padding: 0;
+    margin: 0;
+}
 
 /* Estilos para a lista de locais visitados */
 .detalhes-viagem .locais-visitados {
-    list-style: disc inside;
+    list-style: disc inside; /* Adiciona o bullet point para esta lista específica */
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: #4a2e3e;
+    color: var(--cor-texto-principal);
     font-size: 0.95em;
 }
 
@@ -1166,33 +553,42 @@ body {
     margin-bottom: 5px;
 }
 
+.detalhes-viagem ul li {
+    margin-bottom: 8px;
+    color: var(--cor-texto-principal);
+    font-size: 0.95em;
+}
+
+.detalhes-viagem ul li strong {
+    color: var(--cor-secundaria);
+}
+
 /* Estilo para o link da galeria dentro dos detalhes */
 .detalhes-viagem .action-text {
     font-size: 0.9em;
     margin-top: 20px;
     font-weight: 600;
-    color: #4a2e3e;
+    color: var(--cor-texto-principal);
 }
 
 .detalhes-viagem .link-galeria {
-    color: #b4154a;
+    color: var(--cor-primaria);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .detalhes-viagem .link-galeria:hover {
-    color: #91103a;
+    color: var(--cor-primaria-hover);
     text-decoration: underline;
 }
-
 
 /* Estilo para imagem com filtro de cor sólida "Em Breve" */
 .img-overlay {
     position: relative;
     width: 100%;
     height: 200px;
-    background-color: #8c4b5f;
+    background-color: var(--cor-quinto); /* Cor sólida como overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1202,16 +598,124 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* REMOVIDO: Estilos para a seção de Chamada da Comunidade */
-/* .community-callout { ... } */
-/* .community-callout h2 { ... } */
-/* .community-callout p { ... } */
-/* .community-button { ... } */
-/* .community-button:hover { ... } */
 
-/* RESPONSIVE */
+/* SEÇÃO "CHAMADA PARA COMUNIDADE" (QUERO_VIAJAR.HTML) */
+.community-callout {
+    background-color: #fde7eb; /* Um tom mais claro da sua paleta */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px; /* Espaço acima da seção */
+    border-top: 1px solid var(--cor-terciaria);
+    border-bottom: 1px solid var(--cor-terciaria);
+    color: var(--cor-texto-principal);
+    font-size: 1.1em;
+}
+
+.community-callout h2 {
+    font-size: 2.5em;
+    color: var(--cor-terciaria);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
+}
+
+.community-callout p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+}
+
+.community-button {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px rgba(180, 21, 74, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.community-button:hover {
+    background-color: var(--cor-primaria-hover);
+    box-shadow: 0 8px 16px rgba(145, 16, 58, 0.7);
+    transform: translateY(-2px);
+}
+
+/* RODAPÉ (FOOTER)          */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 5px solid var(--cor-primaria);
+}
+
+.rodape-conteudo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.rodape p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.rodape .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.rodape .redes-sociais a {
+    color: white;
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.rodape .redes-sociais a:hover {
+    color: #f9dde1;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE             */
+@media (max-width: 768px) {
+    /* Geral para telas médias */
+    .topo {
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 180px; /* Ajuste para tablets */
+    }
+
+    #sobre,
+    .timeline-section,
+    .depoimentos-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .destino-card {
+        width: 280px; /* Ajuste para tablets */
+    }
+}
 
 @media (max-width: 640px) {
+    /* Geral para telas pequenas (smartphones) */
     .topo {
         flex-direction: column;
         height: auto;
@@ -1220,7 +724,7 @@ body {
     }
 
     .logo img {
-        height: 70px;
+        height: 70px; /* Mais adequado para celulares */
     }
 
     .menu ul {
@@ -1233,6 +737,19 @@ body {
     .menu a.quero-viajar {
         font-size: 16px;
         padding: 8px 14px;
+    }
+
+    #sobre {
+        margin: 2rem 1rem; /* Mais espaço para as laterais em telas pequenas */
+        padding: 1.5rem;
+    }
+
+    #sobre h2,
+    .timeline-section h2,
+    .depoimentos-section h2,
+    .header-section h1,
+    .community-callout h2 {
+        font-size: 2rem;
     }
 
     .timeline-section {
@@ -1261,14 +778,9 @@ body {
         max-width: 100%;
     }
 
-    .depoimentos-section h2 {
-        font-size: 2rem;
-    }
-
     .comentario {
         max-width: 100%;
         padding: 1rem 1rem;
-        border-left-width: 3px;
     }
 
     /* Responsividade para a seção de destinos */
@@ -1282,51 +794,17 @@ body {
         width: 90%;
         max-width: 350px;
     }
-}
 
-/* --- Estilos para o Rodapé --- */
-.rodape {
-    background-color: #b4154a; /* Cor escura da sua paleta, similar ao botão de viajar */
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 5px solid #b4154a; /* Uma borda superior na cor de destaque */
-}
+    .community-callout {
+        padding: 40px 15px;
+    }
 
-.rodape-conteudo {
-    max-width: 960px; /* Alinha o conteúdo do rodapé com o restante da página */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column; /* Em colunas para empilhar conteúdo e redes sociais */
-    align-items: center;
-    gap: 15px; /* Espaçamento entre os elementos */
-}
+    .community-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
 
-.rodape p {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.rodape .redes-sociais {
-    display: flex;
-    gap: 20px; /* Espaço entre os ícones */
-}
-
-.rodape .redes-sociais a {
-    color: white; /* Cor dos ícones */
-    font-size: 1.8em; /* Tamanho dos ícones */
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-decoration: none; /* Remove sublinhado padrão dos links */
-}
-
-.rodape .redes-sociais a:hover {
-    color: #f9dde1; /* Cor mais clara no hover */
-    transform: scale(1.1); /* Um pequeno zoom no hover */
-}
-
-/* Responsividade para o rodapé */
-@media (max-width: 640px) {
+    /* Rodapé */
     .rodape {
         padding: 20px 15px;
     }
@@ -1336,6 +814,6 @@ body {
     }
 
     .rodape .redes-sociais a {
-        font-size: 1.5em; /* Ícones menores em telas pequenas */
+        font-size: 1.5em;
     }
 }
