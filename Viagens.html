@@ -110,18 +110,6 @@
 
         </div>
     </div>
-    <script>
-        function toggleDetalhes(id) {
-            const detalhesDiv = document.getElementById(`detalhes-${id}`);
-            // Remove a classe 'show' de todos os outros detalhes antes de adicionar ao clicado
-            document.querySelectorAll('.detalhes-viagem.show').forEach(div => {
-                if (div.id !== `detalhes-${id}`) {
-                    div.classList.remove('show');
-                }
-            });
-            detalhesDiv.classList.toggle('show');
-        }
-    </script>
 
     <footer class="rodape">
         <div class="rodape-conteudo">
