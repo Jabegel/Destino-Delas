@@ -11,6 +11,10 @@
         <div class="logo">
             <a href="/index.html"><img src="/Imagens/logo destinos  sem fundo -05 (1).png" alt="Destino Delas"></a>
         </div>
+
+        <!-- Ícone do menu hambúrguer (mobile) -->
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
@@ -142,7 +146,8 @@
 
     <footer class="rodape">
         <div class="rodape-conteudo">
-            <p>&copy; 2025 Destinos Delas feito por João Gabriel dos Santos Pereira - UCB <br>Todos os direitos reservados.</p>
+            <p>&copy; 2025 Destinos Delas feito por João Gabriel dos Santos Pereira - UCB <br>Todos os direitos
+                reservados.</p>
             <div class="redes-sociais">
                 <a href="https://api.whatsapp.com/send/?phone=556195109211&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKomk1leHRuA2FlbQIxMAABp3bjokME7H6Dt5z-pnX3zi9ZnXSh-fK72OedSqUTqEo4JOXWRW9OAj7st68__aem_2taL6wrGZSwbhSf1gGqQlw"
                     target="_blank" aria-label="Entre em contato pelo WhatsApp">
@@ -155,6 +160,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+
 </body>
 
 

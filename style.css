@@ -817,3 +817,59 @@ body {
         font-size: 1.5em;
     }
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: var(--cor-secundaria);
+  cursor: pointer;
+}
+
+/* Estilo mobile para o menu */
+@media (max-width: 640px) {
+  .topo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 100px; /* Aumenta o tamanho da logo no mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cor-secundaria);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 0;
+  }
+}
