@@ -80,6 +80,7 @@ body {
     transform: scale(1.05);
 }
 
+
 /* MENU DE NAVEGAÇÃO          */
 .menu {
     display: flex;
@@ -166,6 +167,7 @@ body {
     /* Adicionado para dar mais espaçamento antes da frase final */
 }
 
+
 /* SEÇÃO "COMO FUNCIONA" (TIMELINE) */
 .timeline-section {
     padding: 3rem 1rem 4rem 1rem;
@@ -221,6 +223,7 @@ body {
     from {
         height: 0;
     }
+
     to {
         height: 100%;
     }
@@ -240,24 +243,31 @@ body {
 .timeline-item:nth-child(1) {
     animation-delay: 0.1s;
 }
+
 .timeline-item:nth-child(2) {
     animation-delay: 0.25s;
 }
+
 .timeline-item:nth-child(3) {
     animation-delay: 0.4s;
 }
+
 .timeline-item:nth-child(4) {
     animation-delay: 0.55s;
 }
+
 .timeline-item:nth-child(5) {
     animation-delay: 0.7s;
 }
+
 .timeline-item:nth-child(6) {
     animation-delay: 0.85s;
 }
+
 .timeline-item:nth-child(7) {
     animation-delay: 1s;
 }
+
 .timeline-item:nth-child(8) {
     animation-delay: 1.15s;
 }
@@ -294,9 +304,11 @@ body {
     0% {
         box-shadow: 0 0 0 0 rgba(176, 58, 46, 0.5);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(176, 58, 46, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(176, 58, 46, 0);
     }
@@ -348,6 +360,7 @@ body {
     user-select: text;
 }
 
+
 /* SEÇÃO "DEPOIMENTOS"         */
 .depoimentos-section {
     max-width: 800px;
@@ -389,18 +402,23 @@ body {
 .comentario:nth-child(1) {
     animation-delay: 0.1s;
 }
+
 .comentario:nth-child(2) {
     animation-delay: 0.2s;
 }
+
 .comentario:nth-child(3) {
     animation-delay: 0.3s;
 }
+
 .comentario:nth-child(4) {
     animation-delay: 0.4s;
 }
+
 .comentario:nth-child(5) {
     animation-delay: 0.5s;
 }
+
 .comentario:nth-child(6) {
     animation-delay: 0.6s;
 }
@@ -411,6 +429,7 @@ body {
     color: var(--cor-texto-principal);
     line-height: 1.5;
 }
+
 
 /* SEÇÕES DE VIAGENS E QUERO VIAJAR */
 .main-content {
@@ -560,127 +579,467 @@ body {
     margin-top: 20px;
     border-radius: 8px;
     text-align: left;
-    color: var(--cor-texto-principal);
-    box-shadow: var(--shadow-media);
-    user-select: text;
+    display: none;
+    /* Escondido por padrão */
+    opacity: 0;
+    /* Começa invisível para transição */
+    transform: translateY(10px);
+    /* Ligeiramente para baixo para efeito */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Transição suave */
+    border: 1px solid var(--cor-borda-clara);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detalhes-viagem.show {
+    display: block;
+    /* Mostra quando a classe 'show' é adicionada */
+    opacity: 1;
+    /* Torna visível */
+    transform: translateY(0);
+    /* Volta à posição original */
 }
 
 .detalhes-viagem h3 {
-    margin-top: 0;
     color: var(--cor-terciaria);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
 }
 
-/* RODAPÉ */
-footer {
-    background-color: var(--cor-fundo-claro);
+.detalhes-viagem ul {
+    list-style: none;
+    /* Remove o estilo de lista padrão */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para a lista de locais visitados */
+.detalhes-viagem .locais-visitados {
+    list-style: disc inside;
+    /* Adiciona o bullet point para esta lista específica */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     color: var(--cor-texto-principal);
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--cor-borda-clara);
-    font-size: 0.9rem;
+    font-size: 0.95em;
 }
 
-/* === MENU MOBILE (Hambúrguer) === */
-.menu-toggle {
-    display: none; /* só aparece no mobile */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 28px;
-    height: 24px;
-    cursor: pointer;
-    padding: 4px;
-    z-index: 1100; /* para ficar acima do menu */
+.detalhes-viagem .locais-visitados li {
+    margin-bottom: 5px;
 }
 
-.menu-toggle span {
+.detalhes-viagem ul li {
+    margin-bottom: 8px;
+    color: var(--cor-texto-principal);
+    font-size: 0.95em;
+}
+
+.detalhes-viagem ul li strong {
+    color: var(--cor-secundaria);
+}
+
+/* Estilo para o link da galeria dentro dos detalhes */
+.detalhes-viagem .action-text {
+    font-size: 0.9em;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+}
+
+.detalhes-viagem .link-galeria {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.detalhes-viagem .link-galeria:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+/* Estilo para imagem com filtro de cor sólida "Em Breve" */
+.img-overlay {
+    position: relative;
     width: 100%;
-    height: 3px;
-    background-color: var(--cor-secundaria);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-/* animação para fechar o menu (x) */
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* MENU MOBILE - inicialmente escondido */
-.menu {
+    height: 200px;
+    background-color: var(--cor-quinto);
+    /* Cor sólida como overlay */
     display: flex;
+    justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile: menu lateral que aparece ao clicar no hambúrguer */
-@media (max-width: 640px) {
-    .menu {
-        position: fixed;
-        top: 100px; /* altura do topo */
-        right: 0;
-        background-color: var(--cor-fundo-claro);
-        width: 180px;
-        height: calc(100% - 100px);
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        z-index: 9999;
+
+/* SEÇÃO "CHAMADA PARA COMUNIDADE" (QUERO_VIAJAR.HTML) */
+.community-callout {
+    background-color: #fde7eb;
+    /* Um tom mais claro da sua paleta */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    /* Espaço acima da seção */
+    border-top: 1px solid var(--cor-terciaria);
+    border-bottom: 1px solid var(--cor-terciaria);
+    color: var(--cor-texto-principal);
+    font-size: 1.1em;
+}
+
+.community-callout h2 {
+    font-size: 2.5em;
+    color: var(--cor-terciaria);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
+}
+
+.community-callout p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+}
+
+.community-button {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px rgba(180, 21, 74, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.community-button:hover {
+    background-color: var(--cor-primaria-hover);
+    box-shadow: 0 8px 16px rgba(145, 16, 58, 0.7);
+    transform: translateY(-2px);
+}
+
+/* RODAPÉ (FOOTER)          */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 5px solid var(--cor-primaria);
+}
+
+.rodape-conteudo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.rodape p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.rodape .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.rodape .redes-sociais a {
+    color: white;
+    font-size: 1.8em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.rodape .redes-sociais a:hover {
+    color: #f9dde1;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE             */
+@media (max-width: 768px) {
+
+    /* Geral para telas médias */
+    .topo {
+        padding: 10px 20px;
+        height: auto;
     }
 
-    /* Quando o menu tiver a classe active, aparece */
-    .menu.active {
-        transform: translateX(0);
+    .menu ul {
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 180px;
+        /* Ajuste para tablets */
+    }
+
+    #sobre,
+    .timeline-section,
+    .depoimentos-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .destino-card {
+        width: 280px;
+        /* Ajuste para tablets */
+    }
+}
+
+@media (max-width: 640px) {
+
+    /* Geral para telas pequenas (smartphones) */
+    .topo {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 70px;
+        /* Mais adequado para celulares */
     }
 
     .menu ul {
         flex-direction: column;
-        gap: 6px;
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .menu li {
-        width: 100%;
-        margin-bottom: 6px;
-        text-align: center;
+        gap: 15px;
+        align-items: center;
     }
 
     .menu a,
     .menu a.quero-viajar {
-        font-size: 14px;
-        padding: 6px 0;
-        width: 100%;
-        display: inline-block;
-        font-weight: 600;
-        border-radius: 6px;
-        box-sizing: border-box;
+        font-size: 16px;
+        padding: 8px 14px;
     }
 
-    .menu a.quero-viajar {
-        padding: 8px 15px;
-        font-weight: 700;
-        background-color: var(--cor-primaria);
-        color: white;
-        box-shadow: var(--shadow-button);
+    #sobre {
+        margin: 2rem 1rem;
+        /* Mais espaço para as laterais em telas pequenas */
+        padding: 1.5rem;
     }
 
-    .menu a.quero-viajar:hover {
-        background-color: var(--cor-primaria-hover);
-        box-shadow: var(--shadow-button-hover);
+    #sobre h2,
+    .timeline-section h2,
+    .depoimentos-section h2,
+    .header-section h1,
+    .community-callout h2 {
+        font-size: 2rem;
     }
 
-    /* Agora mostra o botão hambúrguer no mobile */
-    .menu-toggle {
-        display: flex;
+    .timeline-section {
+        padding: 2rem 1rem;
+        max-width: 100%;
     }
+
+    .timeline {
+        padding-left: 1.5rem;
+        border-left-width: 3px;
+    }
+
+    .timeline-item::before {
+        left: -26px;
+        width: 18px;
+        height: 18px;
+        border-width: 2px;
+    }
+
+    .timeline-icon {
+        font-size: 22px;
+    }
+
+    .depoimentos-section {
+        padding: 2rem 1rem;
+        max-width: 100%;
+    }
+
+    .comentario {
+        max-width: 100%;
+        padding: 1rem 1rem;
+    }
+
+    /* Responsividade para a seção de destinos */
+    .destinos-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .destino-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .community-callout {
+        padding: 40px 15px;
+    }
+
+    .community-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    /* Rodapé */
+    .rodape {
+        padding: 20px 15px;
+    }
+
+    .rodape-conteudo {
+        gap: 10px;
+    }
+
+    .rodape .redes-sociais a {
+        font-size: 1.5em;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+/* Estilo mobile para o menu */
+@media (max-width: 640px) {
+  .topo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 150px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cor-secundaria);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a,
+  .menu a.quero-viajar {
+    display: block;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  #sobre {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  #sobre h2,
+  .timeline-section h2,
+  .depoimentos-section h2,
+  .header-section h1,
+  .community-callout h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+    border-left-width: 3px;
+  }
+
+  .timeline-item::before {
+    left: -26px;
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+  }
+
+  .timeline-icon {
+    font-size: 22px;
+  }
+
+  .depoimentos-section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .comentario {
+    max-width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .destinos-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .destino-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .community-callout {
+    padding: 40px 15px;
+  }
+
+  .community-button {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+
+  .rodape {
+    padding: 20px 15px;
+  }
+
+  .rodape-conteudo {
+    gap: 10px;
+  }
+
+  .rodape .redes-sociais a {
+    font-size: 1.5em;
+  }
 }
