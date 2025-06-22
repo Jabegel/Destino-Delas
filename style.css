@@ -852,8 +852,9 @@ body {
 .menu {
     display: none; /* Oculte o menu por padrão */
     flex-direction: column; /* Muda para coluna quando visível */
-    align-items: center; /* Centraliza os itens */
+    align-items: flex-start; /* Alinha os itens à esquerda */
     gap: 8px; /* Espaçamento entre os itens */
+    margin-top: 10px; /* Espaço acima do menu */
 }
 
 /* Media query para dispositivos móveis */
@@ -862,6 +863,7 @@ body {
         display: flex; /* Mantenha o menu em coluna quando visível */
     }
 }
+
 
 .quero-viajar {
     display: inline-block; /* Permite definir largura e altura */
