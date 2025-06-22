@@ -1,12 +1,11 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #fff2ef;
-    /* Cor de fundo principal */
-    color: #4a2e3e;
-    /* Cor de texto padrão */
+    background-color: #fff2ef; /* Cor de fundo principal */
+    color: #4a2e3e; /* Cor de texto padrão */
     line-height: 1.6;
 }
+
 
 /* VARIÁVEIS CSS (PALETA DE CORES) */
 :root {
@@ -48,7 +47,7 @@ body {
     --shadow-timeline-item-hover: 0 12px 30px rgba(176, 58, 46, 0.35);
 }
 
-/* CABEÇALHO (TOPO)           */
+/* CABEÇALHO (TOPO) */
 .topo {
     display: flex;
     align-items: center;
@@ -68,18 +67,15 @@ body {
     align-items: center;
     margin-top: 10px;
 }
-
 .logo img {
-    height: 250px;
+    height: 150px; /* Ajuste a altura da logo para 150px */
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
-
 .logo img:hover {
     transform: scale(1.05);
 }
-
 
 /* MENU DE NAVEGAÇÃO          */
 .menu {
@@ -108,8 +104,7 @@ body {
 .menu a:hover {
     color: var(--cor-primaria);
     font-size: 18px;
-    background-color: #f9dde1;
-    /* Um tom mais claro baseado na cor primária */
+    background-color: #f9dde1; /* Um tom mais claro baseado na cor primária */
 }
 
 /* ESTILO DO BOTÃO "QUERO VIAJAR" NO MENU */
@@ -128,9 +123,8 @@ body {
 
 /* SEÇÃO "SOBRE" (INDEX.HTML) */
 #sobre {
-    max-width: 800px;
-    margin: 3rem auto 3rem auto;
-    /* Ajustado para dar mais respiro antes do rodapé */
+    max-width: 800px; /* Largura máxima consistente */
+    margin: 3rem auto; /* Centraliza a seção */
     padding: 2rem;
     color: var(--cor-texto-principal);
     font-size: 1rem;
@@ -139,7 +133,6 @@ body {
     box-shadow: var(--shadow-media);
     border: 1px solid var(--cor-borda-clara);
     text-align: center;
-    /* Centraliza TODO o conteúdo de texto da seção */
 }
 
 #sobre h2 {
@@ -361,9 +354,9 @@ body {
 }
 
 
-/* SEÇÃO "DEPOIMENTOS"         */
+/* SEÇÃO "DEPOIMENTOS" */
 .depoimentos-section {
-    max-width: 800px;
+    max-width: 800px; /* Largura máxima consistente */
     margin: 0 auto 2rem auto;
     padding: 1rem 1rem 2rem 1rem;
     background: var(--cor-fundo-section);
@@ -734,9 +727,8 @@ body {
     font-size: 0.9em;
     border-top: 5px solid var(--cor-primaria);
 }
-
 .rodape-conteudo {
-    max-width: 960px;
+    max-width: 960px; /* Largura máxima consistente */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -768,32 +760,26 @@ body {
 
 /* Estilos gerais para dispositivos móveis */
 @media (max-width: 768px) {
-    
-    /* Ajustes no cabeçalho */
     .topo {
         padding: 10px 20px; /* Mantém o padding do cabeçalho */
         height: auto; /* Permite que a altura se ajuste ao conteúdo */
     }
-
     .logo img {
         height: 100px; /* Diminui a altura da logo para 100px em dispositivos móveis */
     }
-
-    /* Menu de navegação */
     .menu {
         display: flex; /* Mantém o menu horizontal */
         align-items: center; /* Alinha os itens verticalmente */
         justify-content: center; /* Centraliza os itens */
     }
 
-    .menu ul {
+     .menu ul {
         list-style: none;
         display: flex; /* Mantém os itens do menu em linha */
         gap: 8px; /* Reduz o espaço entre os itens para 8px */
         margin: 0;
         padding: 0;
     }
-
     .menu a {
         text-decoration: none;
         color: var(--cor-secundaria);
@@ -803,11 +789,11 @@ body {
         border-radius: 6px;
         transition: all 0.3s ease;
     }
-
     .menu a:hover {
         color: var(--cor-primaria);
         background-color: #f9dde1; /* Um tom mais claro baseado na cor primária */
     }
+
 
     /* Seção "Como Funciona" */
     .timeline-section h2 {
@@ -852,9 +838,8 @@ body {
 .menu {
     display: none; /* Oculte o menu por padrão */
     flex-direction: column; /* Muda para coluna quando visível */
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens */
     gap: 8px; /* Espaçamento entre os itens */
-    margin-top: 10px; /* Espaço acima do menu */
 }
 
 /* Media query para dispositivos móveis */
@@ -863,7 +848,6 @@ body {
         display: flex; /* Mantenha o menu em coluna quando visível */
     }
 }
-
 
 .quero-viajar {
     display: inline-block; /* Permite definir largura e altura */
