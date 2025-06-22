@@ -1,8 +1,4 @@
-// script.js
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
+
 
 function toggleDetalhes(id) {
     const detalhesDiv = document.getElementById(`detalhes-${id}`);
@@ -14,3 +10,12 @@ function toggleDetalhes(id) {
     });
     detalhesDiv.classList.toggle('show');
 }
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const menu = document.querySelector('.menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex'; // Mostra o menu
+    } else {
+        menu.style.display = 'none'; // Oculta o menu
+    }
+});

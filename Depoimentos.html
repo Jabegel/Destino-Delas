@@ -14,15 +14,12 @@
             </a>
         </div>
 
-        <!-- Ícone do menu hambúrguer (mobile) -->
-        <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu de navegação" role="button" tabindex="0"
-            onkeypress="if(event.key === 'Enter' || event.key === ' ') toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
-        <nav class="menu">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i> <!-- Ícone de menu -->
+        </button>
+
+        <nav class="menu" style="display: none;"> <!-- Oculte o menu inicialmente -->
             <ul>
                 <li><a href="index.html">Sobre</a></li>
                 <li><a href="Viagens.html">Viagens</a></li>

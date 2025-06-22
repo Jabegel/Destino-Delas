@@ -766,280 +766,118 @@ body {
     transform: scale(1.1);
 }
 
-/* RESPONSIVIDADE             */
+/* Estilos gerais para dispositivos móveis */
 @media (max-width: 768px) {
-
-    /* Geral para telas médias */
+    
+    /* Ajustes no cabeçalho */
     .topo {
-        padding: 10px 20px;
-        height: auto;
-    }
-
-    .menu ul {
-        gap: 15px;
+        padding: 10px 20px; /* Mantém o padding do cabeçalho */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
     }
 
     .logo img {
-        height: 180px;
-        /* Ajuste para tablets */
+        height: 100px; /* Diminui a altura da logo para 100px em dispositivos móveis */
     }
 
-    #sobre,
-    .timeline-section,
-    .depoimentos-section {
-        padding: 2rem 1.5rem;
-    }
-
-    .destino-card {
-        width: 280px;
-        /* Ajuste para tablets */
-    }
-}
-
-@media (max-width: 640px) {
-
-    /* Geral para telas pequenas (smartphones) */
-    .topo {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 20px;
-        gap: 10px;
-    }
-
-    .logo img {
-        height: 70px;
-        /* Mais adequado para celulares */
+    /* Menu de navegação */
+    .menu {
+        display: flex; /* Mantém o menu horizontal */
+        align-items: center; /* Alinha os itens verticalmente */
+        justify-content: center; /* Centraliza os itens */
     }
 
     .menu ul {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        list-style: none;
+        display: flex; /* Mantém os itens do menu em linha */
+        gap: 8px; /* Reduz o espaço entre os itens para 8px */
+        margin: 0;
+        padding: 0;
     }
 
-    .menu a,
-    .menu a.quero-viajar {
-        font-size: 16px;
-        padding: 8px 14px;
+    .menu a {
+        text-decoration: none;
+        color: var(--cor-secundaria);
+        font-weight: 600;
+        font-size: 14px; /* Tamanho de fonte menor para dispositivos móveis */
+        padding: 8px 12px; /* Ajusta o padding */
+        border-radius: 6px;
+        transition: all 0.3s ease;
     }
 
-    #sobre {
-        margin: 2rem 1rem;
-        /* Mais espaço para as laterais em telas pequenas */
-        padding: 1.5rem;
+    .menu a:hover {
+        color: var(--cor-primaria);
+        background-color: #f9dde1; /* Um tom mais claro baseado na cor primária */
     }
 
-    #sobre h2,
-    .timeline-section h2,
-    .depoimentos-section h2,
-    .header-section h1,
-    .community-callout h2 {
-        font-size: 2rem;
+    /* Seção "Como Funciona" */
+    .timeline-section h2 {
+        font-size: 2rem; /* Reduz o tamanho do título */
     }
 
-    .timeline-section {
-        padding: 2rem 1rem;
-        max-width: 100%;
+    .timeline-section p {
+        font-size: 1rem; /* Reduz o tamanho do texto */
     }
 
-    .timeline {
-        padding-left: 1.5rem;
-        border-left-width: 3px;
-    }
-
-    .timeline-item::before {
-        left: -26px;
-        width: 18px;
-        height: 18px;
-        border-width: 2px;
-    }
-
-    .timeline-icon {
-        font-size: 22px;
-    }
-
-    .depoimentos-section {
-        padding: 2rem 1rem;
-        max-width: 100%;
-    }
-
-    .comentario {
-        max-width: 100%;
-        padding: 1rem 1rem;
-    }
-
-    /* Responsividade para a seção de destinos */
-    .destinos-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
+    /* Cards de destino */
     .destino-card {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .community-callout {
-        padding: 40px 15px;
-    }
-
-    .community-button {
-        padding: 12px 25px;
-        font-size: 1em;
+        width: 90%; /* Ajusta a largura do card */
+        margin: 0 auto; /* Centraliza o card */
     }
 
     /* Rodapé */
     .rodape {
-        padding: 20px 15px;
+        font-size: 0.8em; /* Reduz o tamanho da fonte do rodapé */
     }
 
-    .rodape-conteudo {
-        gap: 10px;
+    .rodape .redes-sociais {
+        flex-direction: column; /* Muda para coluna */
+        gap: 10px; /* Reduz o espaço entre os ícones */
     }
 
     .rodape .redes-sociais a {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Ajusta o tamanho dos ícones */
+    }
+}
+/* Estilos para o botão de menu */
+.menu-toggle {
+    display: block; /* Mostra o botão no mobile */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+/* Menu de navegação */
+.menu {
+    display: none; /* Oculte o menu por padrão */
+    flex-direction: column; /* Muda para coluna quando visível */
+    align-items: center; /* Centraliza os itens */
+    gap: 8px; /* Espaçamento entre os itens */
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu {
+        display: flex; /* Mantenha o menu em coluna quando visível */
     }
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: var(--cor-secundaria);
-    cursor: pointer;
+.quero-viajar {
+    display: inline-block; /* Permite definir largura e altura */
+    padding: 10px 20px; /* Ajusta o padding */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: var(--cor-primaria); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    border: none; /* Remove bordas */
+    border-radius: 5px; /* Arredonda os cantos */
+    width: 100px; /* Largura fixa */
+    height: 40px; /* Altura fixa */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
-/* Estilo mobile para o menu */
-@media (max-width: 640px) {
-  .topo {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-  }
-
-  .logo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .logo img {
-    height: 150px;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: var(--cor-secundaria);
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu a,
-  .menu a.quero-viajar {
-    display: block;
-    font-size: 16px;
-    padding: 10px 0;
-  }
-
-  #sobre {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
-
-  #sobre h2,
-  .timeline-section h2,
-  .depoimentos-section h2,
-  .header-section h1,
-  .community-callout h2 {
-    font-size: 2rem;
-  }
-
-  .timeline-section {
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-
-  .timeline {
-    padding-left: 1.5rem;
-    border-left-width: 3px;
-  }
-
-  .timeline-item::before {
-    left: -26px;
-    width: 18px;
-    height: 18px;
-    border-width: 2px;
-  }
-
-  .timeline-icon {
-    font-size: 22px;
-  }
-
-  .depoimentos-section {
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-
-  .comentario {
-    max-width: 100%;
-    padding: 1rem 1rem;
-  }
-
-  .destinos-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .destino-card {
-    width: 90%;
-    max-width: 350px;
-  }
-
-  .community-callout {
-    padding: 40px 15px;
-  }
-
-  .community-button {
-    padding: 12px 25px;
-    font-size: 1em;
-  }
-
-  .rodape {
-    padding: 20px 15px;
-  }
-
-  .rodape-conteudo {
-    gap: 10px;
-  }
-
-  .rodape .redes-sociais a {
-    font-size: 1.5em;
-  }
+.quero-viajar:hover {
+    background-color: darken(var(--cor-primaria), 10%); /* Muda a cor ao passar o mouse */
 }
