@@ -877,4 +877,84 @@ body {
         padding: 8px 12px; /* Use o mesmo padding dos outros links ou um pouco mais */
     }
 
+    
+
+
+}
+
+/* PAGINA INICIAL */
+.imagem-com-botao {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.imagem-com-botao img {
+  width: 100%;
+  display: block;
+  z-index: 1;
+  position: relative; /* para z-index funcionar */
+}
+
+.intro-text {
+  position: absolute;
+  top: 20%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  z-index: 10;
+  padding: 15px 25px;
+  border-radius: 8px;
+
+  background-color: rgba(0, 0, 0, 0.6); /* vermelho escuro translúcido */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.communityss-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e6738e;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* acima da imagem */
+}
+
+.communityss-button:hover {
+  background-color: #c75d78;
+}
+
+@media screen and (max-width: 480px) {
+  .intro-text {
+    max-width: 300px;      /* largura bem menor */
+    padding: 6px 10px;    /* padding mais apertado */
+    font-size: 0.85rem;    /* fonte menor */
+    top: 25%;
+    border-radius: 3px;
+    line-height: 1.2;
+  }
+
+
+  .intro-text h2 {
+    font-size: 1.3rem;   /* ajuste título para celular */
+  }
+
+  .intro-text p {
+    font-size: 0.9rem;
+  }
+
+  .communityss-button {
+    bottom: 15px;        /* menos distância do rodapé */
+    padding: 10px 20px;
+    font-size: 14px;     /* botão um pouco menor */
+  }
 }
