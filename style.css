@@ -860,21 +860,21 @@ body {
     }
 
     .menu a.botao-destaque {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    font-size: 10px;
-    text-align: center;
-    white-space: normal;
-    padding: 5px;
-    border-radius: 12px;
-    background-color: #c4145a;
-    color: white;
-    line-height: 1.2;
-}
-
-
+        /* display: flex; */ /* Remova ou comente esta linha */
+        /* flex-direction: column; */ /* Remova ou comente esta linha */
+        /* align-items: center; */ /* Remova ou comente esta linha */
+        /* justify-content: center; */ /* Remova ou comente esta linha */
+        width: auto; /* Deixe a largura ser definida pelo conteúdo e padding */
+        height: auto; /* Deixe a altura ser definida pelo conteúdo e padding */
+        background-color: #c4145a;
+        color: white;
+        font-weight: bold;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 6px; /* Talvez o mesmo border-radius dos outros links */
+        white-space: nowrap; /* Garante que o texto não quebre, se for uma única palavra curta */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 8px 12px; /* Use o mesmo padding dos outros links ou um pouco mais */
+    }
 
 }
