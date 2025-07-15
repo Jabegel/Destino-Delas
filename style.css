@@ -350,7 +350,7 @@ body {
 
 /* SEÇÃO "DEPOIMENTOS"         */
 .depoimentos-section {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto 2rem auto;
     padding: 1rem 1rem 2rem 1rem;
     background: var(--cor-fundo-section);
@@ -361,62 +361,11 @@ body {
 
 .depoimentos-section h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     font-size: 2rem;
     color: var(--cor-terciaria);
     text-align: center;
 }
-
-.comentario {
-    max-width: 700px;
-    margin: 0 auto 1.2rem auto;
-    padding: 1rem;
-    background: var(--cor-fundo-card);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(180, 21, 74, 0.1);
-    /* Adicionando animação para os depoimentos */
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
-}
-
-.comentario:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-/* Delays para cada depoimento */
-.comentario:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.comentario:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.comentario:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.comentario:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.comentario:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.comentario:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.comentario p {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--cor-texto-principal);
-    line-height: 1.5;
-}
-
 
 /* SEÇÕES DE VIAGENS E QUERO VIAJAR */
 .main-content {
@@ -847,128 +796,244 @@ body {
     }
 
     .menu a.botao-destaque {
-        /* display: flex; */ /* Remova ou comente esta linha */
-        /* flex-direction: column; */ /* Remova ou comente esta linha */
-        /* align-items: center; */ /* Remova ou comente esta linha */
-        /* justify-content: center; */ /* Remova ou comente esta linha */
-        width: auto; /* Deixe a largura ser definida pelo conteúdo e padding */
-        height: auto; /* Deixe a altura ser definida pelo conteúdo e padding */
+        /* display: flex; */
+        /* Remova ou comente esta linha */
+        /* flex-direction: column; */
+        /* Remova ou comente esta linha */
+        /* align-items: center; */
+        /* Remova ou comente esta linha */
+        /* justify-content: center; */
+        /* Remova ou comente esta linha */
+        width: auto;
+        /* Deixe a largura ser definida pelo conteúdo e padding */
+        height: auto;
+        /* Deixe a altura ser definida pelo conteúdo e padding */
         background-color: #c4145a;
         color: white;
         font-weight: bold;
         font-size: 13px;
         text-align: center;
-        border-radius: 6px; /* Talvez o mesmo border-radius dos outros links */
-        white-space: nowrap; /* Garante que o texto não quebre, se for uma única palavra curta */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        padding: 8px 12px; /* Use o mesmo padding dos outros links ou um pouco mais */
+        border-radius: 6px;
+        /* Talvez o mesmo border-radius dos outros links */
+        white-space: nowrap;
+        /* Garante que o texto não quebre, se for uma única palavra curta */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 8px 12px;
+        /* Use o mesmo padding dos outros links ou um pouco mais */
     }
 
-    
+
 
 
 }
 
 /* PAGINA INICIAL */
 .imagem-com-botao {
-  position: relative;
-  width: 100%;
-  display: block;
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
 .imagem-com-botao img {
-  width: 100%;
-  display: block;
-  z-index: 1;
-  position: relative; /* para z-index funcionar */
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: relative;
+    /* para z-index funcionar */
 }
 
 .intro-text {
-  position: absolute;
-  top: 20%;
-  width: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  z-index: 10;
-  padding: 15px 25px;
-  border-radius: 8px;
+    position: absolute;
+    top: 20%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 10;
+    padding: 15px 25px;
+    border-radius: 8px;
 
-  background-color: rgba(0, 0, 0, 0.6); /* vermelho escuro translúcido */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* vermelho escuro translúcido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .communityss-button {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #e6738e;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  z-index: 10; /* acima da imagem */
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e6738e;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    /* acima da imagem */
 }
 
 .communityss-button:hover {
-  background-color: #c75d78;
+    background-color: #c75d78;
 }
 
 @media screen and (max-width: 480px) {
-  .intro-text {
-    max-width: 300px;      /* largura bem menor */
-    padding: 6px 10px;    /* padding mais apertado */
-    font-size: 0.85rem;    /* fonte menor */
-    top: 25%;
-    border-radius: 3px;
-    line-height: 1.2;
-  }
+    .intro-text {
+        max-width: 300px;
+        /* largura bem menor */
+        padding: 6px 10px;
+        /* padding mais apertado */
+        font-size: 0.85rem;
+        /* fonte menor */
+        top: 25%;
+        border-radius: 3px;
+        line-height: 1.2;
+    }
 
 
-  .intro-text h2 {
-    font-size: 1.3rem;   /* ajuste título para celular */
-  }
+    .intro-text h2 {
+        font-size: 1.3rem;
+        /* ajuste título para celular */
+    }
 
-  .intro-text p {
-    font-size: 0.9rem;
-  }
+    .intro-text p {
+        font-size: 0.9rem;
+    }
 
-  .communityss-button {
-    bottom: 15px;        /* menos distância do rodapé */
-    padding: 10px 20px;
-    font-size: 14px;     /* botão um pouco menor */
-  }
+    .communityss-button {
+        bottom: 15px;
+        /* menos distância do rodapé */
+        padding: 10px 20px;
+        font-size: 14px;
+        /* botão um pouco menor */
+    }
 }
 
 /*Botão de Quero participar em Como Funciona*/
 
 .botao-final {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 60px; /* espaço em relação ao rodapé */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    /* espaço em relação ao rodapé */
 }
 
 .communityss-button-Como {
-  display: inline-block;
-  background-color: #cb103c;
-  color: white;
-  padding: 18px 36px; /* Aumenta o tamanho do botão */
-  border: none;
-  border-radius: 30px;
-  font-size: 18px; /* Tamanho da fonte maior */
-  font-weight: bold; /* Opcional: dá mais presença ao texto */
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: #cb103c;
+    color: white;
+    padding: 18px 36px;
+    /* Aumenta o tamanho do botão */
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    /* Tamanho da fonte maior */
+    font-weight: bold;
+    /* Opcional: dá mais presença ao texto */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .communityss-button-Como:hover {
-  background-color: #bb123c;
+    background-color: #bb123c;
 }
 
+/*Depoimentos Carrosel*/
 
+.container {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, .5);
+    border-radius: 15px;
+}
+
+.card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .face.face1 {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.card .face.face1 h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.card .face.face1 .content {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0 0 1em 0;
+    font-weight: 500;
+}
+
+.card .face.face2 {
+    background: #111;
+    transition: 0.5s;
+}
+
+.card:hover .face.face2 {
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+}
+
+.card .face.face2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px 0 0 15px;
+}
+
+.card .face.face2 {
+    background: none; /* Remove gradiente */
+    transition: 0.5s;
+    border-radius: 15px;
+    overflow: hidden; /* Isso é essencial para cortar imagem no hover */
+}
+
+.card .face.face2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante preenchimento proporcional */
+    display: block;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.card:hover .face.face2 {
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+}
+
+.card:hover .face.face2 img {
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+    object-fit: cover;
+}
