@@ -10,3 +10,5 @@ function toggleDetalhes(id) {
     });
     detalhesDiv.classList.toggle('show');
 }
+
+
