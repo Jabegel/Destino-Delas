@@ -760,17 +760,18 @@ body {
 @media (max-width: 768px) {
 
     /* Ajustes no cabeçalho */
-    .topo {
+
+    /*.topo {
         padding: 1px 20px;
         /* Mantém o padding do cabeçalho */
-        height: auto;
+        /*height: auto;
         /* Permite que a altura se ajuste ao conteúdo */
-    }
+    /*} /*
 
-    .logo img {
+    /*.logo img {
         height: 150px;
         /* Diminui a altura da logo para 100px em dispositivos móveis */
-    }
+    /*} */
 
     /* Menu de navegação */
     .menu {
