@@ -741,7 +741,7 @@ body {
 
 .rodape .redes-sociais {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .rodape .redes-sociais a {
@@ -840,7 +840,7 @@ body {
     }
 
     .rodape .redes-sociais {
-        flex-direction: column;
+        flex-direction: row;
         /* Muda para coluna */
         gap: 10px;
         /* Reduz o espaço entre os ícones */
