@@ -82,34 +82,87 @@ body {
 
 
 /* MENU DE NAVEGAÇÃO          */
+/* BOTÃO MENU */
+.menu-trigger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
+  background: var(--cor-secundaria);
+  border-radius: 8px;
+}
+
+.menu-trigger > p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.7rem;
+  margin-top: 6px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bars span {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  border-radius: 2px;
+}
+
+/* MENU LATERAL */
 .menu {
-    display: flex;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #c56b86c6;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  padding: 80px 30px;
+  z-index: 1005;
+}
+
+.menu.active {
+  transform: translateX(0);
 }
 
 .menu ul {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.menu a {
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    font-weight: 600;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+.menu ul li {
+  margin-bottom: 20px;
 }
 
-.menu a:hover {
-    color: var(--cor-primaria);
-    font-size: 18px;
-    background-color: #f9dde1;
-    /* Um tom mais claro baseado na cor primária */
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover {
+  color: var(--cor-primaria);
+  transform: translateX(10px);
 }
 
 /* ESTILO DO BOTÃO "QUERO VIAJAR" NO MENU */
@@ -119,6 +172,7 @@ body {
     padding: 10px 20px;
     font-weight: 700;
     box-shadow: var(--shadow-button);
+    border-radius: 15px; 
 }
 
 .menu a.quero-viajar:hover {
@@ -1037,3 +1091,4 @@ body {
     border-radius: 0 0 15px 15px;
     object-fit: cover;
 }
+
