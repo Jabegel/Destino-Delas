@@ -70,7 +70,7 @@ body {
 }
 
 .logo img {
-    height: 250px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -762,16 +762,17 @@ body {
     /* Ajustes no cabeçalho */
 
     /*.topo {
-        padding: 1px 20px;
+        /*padding: 1px 20px;
         /* Mantém o padding do cabeçalho */
         /*height: auto;
         /* Permite que a altura se ajuste ao conteúdo */
-    /*} /*
+    /*}*/
 
-    /*.logo img {
-        height: 150px;
+    .logo img {
+        height: 80px;
         /* Diminui a altura da logo para 100px em dispositivos móveis */
-    /*} */
+        text-align: center;
+    }
 
     /* Menu de navegação */
     .menu {
