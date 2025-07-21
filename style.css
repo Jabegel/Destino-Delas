@@ -85,7 +85,7 @@ body {
 /* BOTÃO MENU */
 .menu-trigger {
   position: fixed;
-  top: 20px;
+  top: 40px;
   right: 20px;
   width: 50px;
   height: 50px;
@@ -95,7 +95,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1010;
-  background: var(--cor-secundaria);
+  background: #A61B5F ;
   border-radius: 8px;
 }
 
@@ -188,7 +188,7 @@ body {
     padding: 2rem;
     color: var(--cor-texto-principal);
     font-size: 1rem;
-    background-color: var(--cor-fundo-section);
+    background-color: #ffffffbb;
     border-radius: 12px;
     box-shadow: var(--shadow-media);
     border: 1px solid var(--cor-borda-clara);
@@ -492,7 +492,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: var(--cor-terciaria);
+    background-color: #A61B5F ;
     color: white;
     padding: 5px 12px;
     border-radius: 20px;
@@ -1175,4 +1175,36 @@ body {
   }
 }
 
+/* IMAGEM DE FUNDO EM SOBRE*/
 
+body.pagina-sobre {
+  background-image: url('/Imagens/Chapada_Fundo_Na.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* COR PRETO E BRANCO em VIAGENS*/
+
+.preto-e-branco {
+    filter: grayscale(100%);
+}
+
+
+/* BOTÃO DE QUERO SABER MAIS */
+
+.botao-pdf {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:var(--cor-primaria); /* rosa, como exemplo */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-pdf:hover {
+    background-color: var(--cor-primaria);
+}
