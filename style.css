@@ -84,85 +84,85 @@ body {
 /* MENU DE NAVEGAÇÃO          */
 /* BOTÃO MENU */
 .menu-trigger {
-  position: fixed;
-  top: 40px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1010;
-  background: #A61B5F ;
-  border-radius: 8px;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1010;
+    background: #A61B5F;
+    border-radius: 8px;
 }
 
-.menu-trigger > p {
-  color: #fff;
-  font-weight: bold;
-  font-size: 0.7rem;
-  margin-top: 6px;
-  opacity: 0.8;
-  text-align: center;
+.menu-trigger>p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-top: 6px;
+    opacity: 0.8;
+    text-align: center;
 }
 
 
 .bars {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .bars span {
-  width: 28px;
-  height: 3px;
-  background-color: #fff;
-  display: block;
-  border-radius: 2px;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    border-radius: 2px;
 }
 
 /* MENU LATERAL */
 .menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: #c56b86c6;
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
-  padding: 80px 30px;
-  z-index: 1005;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #c56b86c6;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    padding: 100px 30px;
+    z-index: 1005;
 }
 
 .menu.active {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menu ul li {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.4rem;
-  transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: 0.3s;
 }
 
 .menu ul li a:hover {
-  color: var(--cor-primaria);
-  transform: translateX(10px);
+    color: var(--cor-primaria);
+    transform: translateX(10px);
 }
 
 /* ESTILO DO BOTÃO "QUERO VIAJAR" NO MENU */
@@ -172,7 +172,7 @@ body {
     padding: 10px 20px;
     font-weight: 700;
     box-shadow: var(--shadow-button);
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .menu a.quero-viajar:hover {
@@ -492,7 +492,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: #A61B5F ;
+    background-color: #A61B5F;
     color: white;
     padding: 5px 12px;
     border-radius: 20px;
@@ -764,7 +764,7 @@ body {
     /*.topo {
         /*padding: 1px 20px;
         /* Mantém o padding do cabeçalho */
-        /*height: auto;
+    /*height: auto;
         /* Permite que a altura se ajuste ao conteúdo */
     /*}*/
 
@@ -777,12 +777,14 @@ body {
     /* Menu de navegação */
     .menu {
         display: flex;
-        /* Mantém o menu horizontal */
+        flex-direction: column;
+        /* necessário se for menu vertical */
         align-items: center;
-        /* Alinha os itens verticalmente */
-        justify-content: center;
-        /* Centraliza os itens */
+        justify-content: flex-start;
+        padding-top: 125px;
+        /* ajuste esse valor */
     }
+
 
     .menu ul {
         list-style: none;
@@ -1004,7 +1006,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas fixas */
     gap: 30px;
     padding: 0 20px;
     box-sizing: border-box;
@@ -1086,20 +1089,20 @@ body {
         padding: 0 10px;
     }
 
-      .card .face.face1 {
-    padding: 15px;
-    font-size: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
+    .card .face.face1 {
+        padding: 15px;
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .card .face.face1 h2 {
-    font-size: 1.2rem;
-  }
+    .card .face.face1 h2 {
+        font-size: 1.2rem;
+    }
 
-  .card .face.face1 p {
-    font-size: 1rem;
-  }
+    .card .face.face1 p {
+        font-size: 1rem;
+    }
 }
 
 /* SETA DE DEPOIMENTOS */
@@ -1113,13 +1116,17 @@ body {
     opacity: 0.8;
     z-index: 3;
     animation: bounce 1.2s infinite;
-    pointer-events: none; /* permite clicar na imagem abaixo normalmente */
+    pointer-events: none;
+    /* permite clicar na imagem abaixo normalmente */
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(-50%) translateY(0);
     }
+
     50% {
         transform: translateX(-50%) translateY(-5px);
     }
@@ -1128,57 +1135,58 @@ body {
 
 
 @media screen and (max-width: 768px) {
-  .timeline-section {
-    padding: 1.5rem 1rem;
-    max-width: 100%;
-  }
+    .timeline-section {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
 
-  .timeline-section h2 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
+    .timeline-section h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
 
-  .timeline-intro {
-    font-size: 1rem;
-    padding: 0 10px;
-    text-align: center;
-  }
+    .timeline-intro {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
 
-  .timeline {
-    border-left: 3px solid var(--cor-terciaria);
-    padding-left: 1rem;
-  }
+    .timeline {
+        border-left: 3px solid var(--cor-terciaria);
+        padding-left: 1rem;
+    }
 
-  .timeline-item {
-    margin-bottom: 2rem;
-  }
+    .timeline-item {
+        margin-bottom: 2rem;
+    }
 
-  .timeline-content {
-    padding: 1rem;
-    background: #fdfdfd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
+    .timeline-content {
+        padding: 1rem;
+        background: #fdfdfd;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
 
-  .timeline-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
 
-  .timeline-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
+    .timeline-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 }
 
 /* IMAGEM DE FUNDO EM SOBRE*/
 
 body.pagina-sobre {
-  background-image: url('/Imagens/Chapada_Fundo_Na.jpg'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-image: url('/Imagens/Chapada_Fundo_Na.jpg');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* COR PRETO E BRANCO em VIAGENS*/
@@ -1193,7 +1201,8 @@ body.pagina-sobre {
 .botao-pdf {
     display: inline-block;
     padding: 10px 20px;
-    background-color:var(--cor-primaria); /* rosa, como exemplo */
+    background-color: var(--cor-primaria);
+    /* rosa, como exemplo */
     color: white;
     text-decoration: none;
     border-radius: 5px;
