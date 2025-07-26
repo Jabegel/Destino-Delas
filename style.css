@@ -21,9 +21,9 @@ body {
 
     --cor-secundaria: #6d0033;
     /* Roxo escuro, texto de menu, títulos de card */
-    --cor-terciaria: #b03a2e;
+    --cor-terciaria: #B74B64; 
     /* Marrom avermelhado, títulos de seção, linha do tempo */
-    --cor-quaternaria: #884ea0;
+    --cor-quaternaria: #DA6773;
     /* Roxo médio, títulos dentro da timeline */
     --cor-quinto: #8c4b5f;
     /* Roxo acinzentado, subtítulos, datas */
@@ -32,7 +32,7 @@ body {
     /* Texto geral */
     --cor-texto-destaque: #952215;
     /* Frase final no "Sobre" */
-    --cor-texto-card-link: #281522;
+    --cor-texto-card-link: rgba(0, 0, 0, 0.7);
     /* Texto de parágrafos na timeline */
 
     --cor-borda-clara: #f0e0d0;
