@@ -1189,11 +1189,7 @@ body.pagina-sobre {
     background-attachment: fixed;
 }
 
-/* COR PRETO E BRANCO em VIAGENS*/
 
-.preto-e-branco {
-    filter: grayscale(100%);
-}
 
 
 /* BOTÃO DE QUERO SABER MAIS */
@@ -1213,3 +1209,27 @@ body.pagina-sobre {
 .botao-pdf:hover {
     background-color: var(--cor-primaria);
 }
+
+/* COR PRETO E BRANCO em VIAGENS*/
+
+.preto-e-branco {
+    filter: grayscale(100%);
+}
+
+
+/* COR PRETO E BRANCO na badge em VIAGENS */
+.badge-preto-e-branco {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #000000a7;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
