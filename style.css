@@ -503,6 +503,26 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.badge_esgotada {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff0088;
+    color: white;
+    width: 85px;       /* altura e largura iguais */
+    height: 85px;
+    display: flex;     /* centraliza o texto */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 .destino-card img {
     width: 100%;
     height: 200px;
