@@ -507,10 +507,10 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: #ff0088;
-    color: white;
-    width: 85px;       /* altura e largura iguais */
-    height: 85px;
+    background-color: #000000e1;
+    color: rgb(255, 229, 229);
+    width: 60px;       /* altura e largura iguais */
+    height: 60px;
     display: flex;     /* centraliza o texto */
     align-items: center;
     justify-content: center;
