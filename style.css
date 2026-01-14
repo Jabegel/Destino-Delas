@@ -945,10 +945,10 @@ body {
     transform: translateX(-50%);
     background-color: #e6738e;
     color: white;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1.1em;
     text-decoration: none;
     transition: background-color 0.3s ease;
     z-index: 10;
