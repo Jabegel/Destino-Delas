@@ -188,7 +188,7 @@ body {
     padding: 2rem;
     color: var(--cor-texto-principal);
     font-size: 1rem;
-    background-color: #ffffffbb;
+    background-color: rgba(255, 255, 255, 0.92);
     border-radius: 12px;
     box-shadow: var(--shadow-media);
     border: 1px solid var(--cor-borda-clara);
@@ -203,8 +203,90 @@ body {
     margin-bottom: 1rem;
 }
 
+#sobre h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 #sobre p {
     margin-bottom: 1.2rem;
+}
+
+/* Listas com ícones de check */
+#sobre .lista-check {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#sobre .lista-check li {
+    margin-bottom: 0.8rem;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#sobre .lista-check i {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Listas com hífen */
+#sobre .lista-hifen {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#sobre .lista-hifen li {
+    margin-bottom: 0.8rem;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+#sobre .lista-hifen li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--cor-terciaria);
+    font-weight: bold;
+}
+
+/* Listas com estrela */
+#sobre .lista-estrela {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#sobre .lista-estrela li {
+    margin-bottom: 0.8rem;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#sobre .lista-estrela i {
+    color: var(--cor-terciaria);
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 #sobre p strong {
@@ -218,6 +300,7 @@ body {
     font-weight: 700;
     color: var(--cor-texto-destaque);
     margin-top: 2rem;
+    font-size: 1.2rem;
     /* Adicionado para dar mais espaçamento antes da frase final */
 }
 
