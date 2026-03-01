@@ -629,6 +629,246 @@ body.pagina-sobre .timeline {
     margin: 0 auto;
 }
 
+/* Estilo para destinos narrativos */
+.destinos-narrativa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 100%;
+}
+
+.destino-narrativa {
+    background-color: var(--cor-fundo-section);
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    border: 1px solid var(--cor-borda-clara);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.destino-narrativa:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.destino-imagem {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px 10px 0 0;
+}
+
+.destino-narrativa:hover .destino-imagem {
+    transform: scale(1.05);
+    filter: brightness(0.95);
+}
+
+.destino-imagem-placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, var(--cor-terciaria), var(--cor-quaternaria));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    border-radius: 10px 10px 0 0;
+}
+
+.destino-header {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.destino-header h2 {
+    color: var(--cor-secundaria);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.destino-subtitulo {
+    color: var(--cor-quinto);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0 0 15px 0;
+}
+
+.destino-conteudo {
+    padding: 0 20px 20px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.destino-conteudo p {
+    color: var(--cor-texto-principal);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.destino-conteudo p strong {
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+.lista-destino {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.lista-destino li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+    color: var(--cor-texto-principal);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.lista-destino li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.botao-destino {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: auto;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-button);
+    align-self: flex-start;
+}
+
+.botao-destino:hover {
+    background-color: var(--cor-primaria-hover);
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* Seção de Confiança */
+.confianca-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--cor-fundo-section);
+    border-radius: 12px;
+    box-shadow: var(--shadow-media);
+    border: 1px solid var(--cor-borda-clara);
+    text-align: center;
+}
+
+.confianca-section h2 {
+    color: var(--cor-terciaria);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.lista-confianca {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.lista-confianca li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--cor-texto-principal);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.lista-confianca i {
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.confianca-link {
+    margin-top: 20px;
+    color: var(--cor-secundaria);
+    font-size: 0.95rem;
+}
+
+.confianca-link a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.confianca-link a:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+/* Seção de Lista de Espera */
+.lista-espera-section {
+    max-width: 800px;
+    margin: 60px auto 40px auto;
+    padding: 40px;
+    background-color: var(--cor-fundo-section);
+    border-radius: 12px;
+    box-shadow: var(--shadow-media);
+    border: 1px solid var(--cor-borda-clara);
+    text-align: center;
+}
+
+.lista-espera-section h2 {
+    color: var(--cor-terciaria);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.lista-espera-section p {
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.botao-espera {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-button);
+}
+
+.botao-espera:hover {
+    background-color: var(--cor-primaria-hover);
+    box-shadow: var(--shadow-button-hover);
+}
+
 .destino-card {
     background-color: var(--cor-fundo-section);
     border-radius: 10px;

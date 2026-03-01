@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinos Delas - Viagens</title>
+    <title>Próximos Destinos - Destinos Delas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,8 +12,7 @@
 <body>
     <header class="topo">
         <div class="logo">
-            <a href="Inicial.html"></a>
-            <a href="/Inicial.html"><img src="/Imagens/logo destinos  sem fundo -05 (4).png" alt="Destino Delas"></a>
+            <a href="Inicial.html"><img src="Imagens/logo destinos  sem fundo -05 (4).png" alt="Destino Delas"></a>
         </div>
 
         <!-- Botão de menu -->
@@ -29,157 +28,254 @@
         <nav class="menu" id="side-menu">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
-                <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Viagens.html">Viagens</a></li>
+                <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Depoimentos.html">Elas disseram</a></li>
                 <li><a class="quero-viajar" href="Quero_Viajar.html">Quero Viajar</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-content">
+    <section class="main-content">
         <div class="header-section">
-            <h1>Nossas Viagens</h1>
-            <p>Descubra experiências únicas de conexão e aventura em destinos incríveis, pensadas para você.</p>
+            <h1>Nossas Expedições 2026</h1>
+            <p>Viagens criadas especialmente para mulheres que querem viver o mundo com coragem, presença e pertencimento.</p>
+            <p>Todos os roteiros são cuidadosamente planejados para unir segurança, acolhimento, vivências afetivas e experiências inesquecíveis — sempre com liderança feminina e grupos pequenos.</p>
         </div>
 
-        <div class="destinos-container">
+        <!-- Bloco de Confiança -->
+        <div class="confianca-section">
+            <h2>Como funcionam nossas expedições</h2>
+            <ul class="lista-confianca">
+                <li><i class="fas fa-check-circle"></i> Grupos femininos intimistas</li>
+                <li><i class="fas fa-check-circle"></i> Guia da agência presente durante toda a experiência</li>
+                <li><i class="fas fa-check-circle"></i> Logística organizada nos mínimos detalhes</li>
+                <li><i class="fas fa-check-circle"></i> Preparação pré-viagem + encontro virtual</li>
+                <li><i class="fas fa-check-circle"></i> Apoio emocional durante todo o processo</li>
+                <li><i class="fas fa-check-circle"></i> Roteiros autorais e afetivos</li>
+                <li><i class="fas fa-check-circle"></i> Pagamento facilitado conforme o destino</li>
+            </ul>
+            <p class="confianca-link">👉 <em>Saiba mais em <a href="Como_funciona.html">"Como funciona"</a>.</em></p>
+        </div>
 
-            <div class="destino-card">
-                <div class="badge-preto-e-branco">Primeira Edição</div>
-                <img class="preto-e-branco" src="/Imagens/chapadaI.jpg" alt="Chapada dos Veadeiros">
-                <div class="content">
-                    <h2>Chapada dos Veadeiros</h2>
-                    <p>De 17 a 22 de Março de 2025</p>
-                    <button onclick="toggleDetalhes('chapada1')">Veja Como Foi</button>
-                    <div id="detalhes-chapada1" class="detalhes-viagem">
-                        <p class="action-text">Veja alguns dos momentos da nossa primeira aventura! <a
-                                href="https://www.instagram.com/p/DHn0eO7ucyA/?igsh=MWV5MzJ0OHp1MmZ6Yg=="
-                                target="_blank" class="link-galeria">Veja a galeria de fotos!</a></p>
-                    </div>
+        <!-- Destinos Container -->
+        <div class="destinos-container destinos-narrativa">
+            <!-- DESTINO 1: Itacaré -->
+            <div class="destino-narrativa">
+                <img src="/Imagens/Itacaré (BA).webp" alt="Itacaré" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Itacaré (BA) | Fevereiro 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres que precisam respirar, desacelerar e voltar ao corpo.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p><strong>Itacaré é uma experiência de reconexão.</strong></p>
+                    <p>Natureza, calma, brisa, água salgada, trilhas leves e dias que devolvem presença.</p>
+                    <p><strong>Perfeito para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>querem começar o ano mais leves</li>
+                        <li>precisam de uma pausa emocional</li>
+                        <li>desejam primeiro destino em grupo</li>
+                        <li>querem uma viagem íntima e acolhedora</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Quero saber mais</a>
                 </div>
             </div>
 
-
-
-
-
-            <div class="destino-card">
-                <div class="badge">Destino Inter.</div>
-                <img src="/Imagens/Buenos Aieres.jpg" alt="Buenos Aieres">
-                <div class="content">
-                    <h2>Buenos Aires + Uruguai</h2>
-                    <p class="subtitle">Uma viagem com gastronomia, cultura e dias Inesquecíveis!</p>
-                    <p>De 6 a 10 de Novembro/2025</p>
-                    <button onclick="toggleDetalhes('buenos_uruguai')">Quero saber mais</button>
-                    <div id="detalhes-buenos_uruguai" class="detalhes-viagem">
-                        <h3>Prepare-se para uma viagem unica</h3>
-                        <p>Atendendo aos desejos e curiosidade da nossa Comunidade, estamos preparando com muito carinho
-                            a nossa primeira viagem internacional, explorando os encantos de Buenos Aires e Uruguai. Uma
-                            experiência única, cheia de cultura, gastronomia e momentos inesquecíveis!</p>
-                        <p><strong>Para datas exatas e detalhes do novo roteiro</strong></p>
-                        <p> <a href="Quero_Viajar.html" class="link-quero-viajar">Clique Aqui!</a></p>
-                    </div>
+            <!-- DESTINO 2: Buenos Aires + Uruguai -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Buenos Aieres.jpg" alt="Buenos Aires + Uruguai" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Buenos Aires + Uruguai | Março 2026</h2>
+                    <p class="destino-subtitulo"><em>Para quem quer renascer pela arte, beleza e liberdade.</em></p>
                 </div>
-
-
-            </div>
-
-            <div class="destino-card">
-                <div class="badge">Próxima Edição</div>
-                <img src="/Imagens/Na_Lua_Só_Cortada.jpg" alt="Chapada dos Veadeiros II">
-                <div class="content">
-                    <h2>Chapada dos Veadeiros</h2>
-                    <p class="subtitle">Embarque na próxima edição para o paraíso natural</p>
-                    <p>De 12 a 17 de Novembro/2025</p>
-                    <button onclick="toggleDetalhes('chapada2')">Quero saber mais</button>
-                    <div id="detalhes-chapada2" class="detalhes-viagem">
-                        <h3>Prepare-se para uma nova imersão na Chapada dos Veadeiros!</h3>
-                        <p>Devido ao sucesso da nossa primeira viagem, estamos preparando uma nova edição para você se
-                            reconectar com a natureza exuberante do cerrado e consigo mesma.</p>
-                        <p><strong>Para datas exatas e detalhes do novo roteiro</strong></p>
-                        <p> <a href="Quero_Viajar.html" class="link-quero-viajar">Clique Aqui!</a></p>
-                    </div>
+                <div class="destino-conteudo">
+                    <p>Uma viagem que mistura cultura, gastronomia, caminhadas leves, paisagens costeiras e respiros emocionais — perfeita para recoços.</p>
+                    <p><strong>Para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>querem viajar internacionalmente pela primeira vez</li>
+                        <li>amam cultura, música e arquitetura</li>
+                        <li>querem profundidade com leveza</li>
+                        <li>buscam uma viagem transformadora e segura</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Detalhes</a>
                 </div>
             </div>
 
-            <div class="destino-card">
-                <div class="badge">Edição Futura</div>
-                <img src="/Imagens/salvador.jpg" alt="Salvador">
-                <div class="content">
-                    <h2>Salvador + Morro de SP</h2>
-                    <p class="subtitle">Embarque em uma edição de viagem dupla</p>
-                    <p>De 05 a 10 de Dezembro/2025</p>
-                    <button onclick="toggleDetalhes('chapada2')">Quero saber mais</button>
-                    <div id="detalhes-salvador" class="detalhes-viagem">
-                        <h3>Dois destinos únicos que reúnem um pouco do melhor que a Bahia tem para nos oferecer!</h3>
-                        <p>E se ir para a Bahia já é bom, imaginar em um grupo de mulheres animadas, que busca dias de
-                            sol, praia, boas bebidas e muita diversão?
-                        </p>
-                        <p><strong>Para datas exatas e detalhes do novo roteiro</strong></p>
-                        <p> <a href="Quero_Viajar.html" class="link-quero-viajar">Clique Aqui!</a></p>
-                    </div>
+            <!-- DESTINO 3: Chapada dos Veadeiros -->
+            <div class="destino-narrativa">
+                <img src="Imagens/chapadaI.jpg" alt="Chapada dos Veadeiros" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Chapada dos Veadeiros | Abril 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres em expansão, cura e coragem.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p><strong>A Chapada é um dos nossos destinos mais afetivos.</strong></p>
+                    <p>Uma viagem de virada, força e beleza. Lugar de decisões, libertações e reconexão com o próprio eixo.</p>
+                    <p><strong>Para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>querem uma viagem que realmente mexa por dentro</li>
+                        <li>buscam natureza, trilhas e água pura</li>
+                        <li>querem grupos acolhedores</li>
+                        <li>querem renascer</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 4: Jalapão -->
+            <div class="destino-narrativa">
+                <img src="Imagens/jalapao.jpg" alt="Jalapão" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Jalapão (TO) | Maio 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres que querem redescobrir sua força interna e externa.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p>Cânions, fervedouros, estradas, poços cristalinos e uma energia bruta que devolve potência.</p>
+                    <p><strong>Ideal para:</strong></p>
+                    <ul class="lista-destino">
+                        <li>mulheres em virada de ciclo</li>
+                        <li>quem quer provar sua força para si mesma</li>
+                        <li>quem busca aventura com segurança</li>
+                        <li>quem precisa de um choque de presença</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 5: Peru -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Peru.webp" alt="Peru" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Peru | Junho 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres que buscam espiritualidade, presença e transformação.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p><strong>Peru é uma viagem de profundidade.</strong></p>
+                    <p>Cultura, energia ancestral, história e uma força silenciosa que abre caminhos internos.</p>
+                    <p><strong>Perfeito para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>estão vivendo mudanças profundas</li>
+                        <li>querem uma experiência espiritual segura e leve</li>
+                        <li>desejam viajar internacionalmente com suporte</li>
+                        <li>querem viver algo inesquecível</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 6: Lençóis Maranhenses -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Lençóis Maranhenses.webp" alt="Lençóis Maranhenses" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Lençóis Maranhenses | Julho 2026</h2>
+                    <p class="destino-subtitulo"><em>Para quem deseja leveza, beleza e reconexão com a natureza.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p>Lagoas azul turquesa, dunas, silêncio, vento, simplicidade e a sensação de que a vida pode, sim, ser mais leve.</p>
+                    <p><strong>Para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>querem descanso emocional</li>
+                        <li>buscam beleza natural única</li>
+                        <li>desejam uma viagem para respirar</li>
+                        <li>querem se reencontrar</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 7: Ilhabela -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Ilhabela (Baleias).webp" alt="Ilhabela" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Ilhabela (Baleias) | Agosto 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres que querem viver a natureza de forma intimista e segura.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p>Observação de baleias, trilhas leves, mar calmo, paz e pertencimento feminino.</p>
+                    <p><strong>Perfeito para:</strong></p>
+                    <ul class="lista-destino">
+                        <li>quem quer algo mais íntimo</li>
+                        <li>quem gosta de natureza e calmaria</li>
+                        <li>quem busca conexão e acolhimento</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Lista de espera</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 8: Eurotrip Delas -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Eurotrip.webp" alt="Eurotrip Delas" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Eurotrip Delas | Setembro 2026</h2>
+                    <p class="destino-subtitulo"><em>Para mulheres que querem viver o mundo — com pertencimento e suporte.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p>Uma experiência internacional de 17 dias por múltiplos países, criada exclusivamente para mulheres que desejam liberdade com segurança.</p>
+                    <p><strong>Para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>querem viver o sonho da Europa</li>
+                        <li>desejam viajar com grupo seguro</li>
+                        <li>buscam história, cultura e beleza</li>
+                        <li>querem uma viagem longa e transformadora</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 9: Amazônia -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Amazônia.webp" alt="Amazônia" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Amazônia | Outubro 2026</h2>
+                    <p class="destino-subtitulo"><em>Para quem busca uma experiência profunda com natureza, cultura e ancestralidade.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p>Vivência imersiva, comunidade ribeirinha, floresta, rios, silêncio, cura e força.</p>
+                    <p><strong>Para mulheres que:</strong></p>
+                    <ul class="lista-destino">
+                        <li>amam natureza bruta</li>
+                        <li>buscam algo verdadeiramente diferente</li>
+                        <li>querem presença e profundidade</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- DESTINO 10: Chapada dos Veadeiros (Novembro) -->
+            <div class="destino-narrativa">
+                <img src="Imagens/Chapada dos Veadeiros.webp" alt="Chapada dos Veadeiros - Novembro" class="destino-imagem">
+                <div class="destino-header">
+                    <h2>Chapada dos Veadeiros | Novembro 2026</h2>
+                    <p class="destino-subtitulo"><em>Nossa viagem de encerramento do ano — para mulheres que querem fechar ciclos com verdade.</em></p>
+                </div>
+                <div class="destino-conteudo">
+                    <p><strong>A Chapada é onde muitas mulheres entendem sua própria força.</strong></p>
+                    <p>Nossa última viagem do ano tem um simbolismo especial.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-destino">👉 Garantir vaga</a>
                 </div>
             </div>
         </div>
 
-        <!--
-        <div class="destino-card">
-            <div class="badge">Próximo Destino</div>
-            <img src="/Imagens/Jalapão_Na.jpeg" alt="Jalapão">
-            <div class="content">
-                <h2>Jalapão</h2>
-                <br>
-                <p class="subtitle">Desconecte-se da rotina e viva dias leves rodeada pela natureza</p>
-                <p>De 1 a 6 de Outubro/2025</p>
-                <button onclick="toggleDetalhes('jalapao')">Quero saber mais</button>
-                <div id="detalhes-jalapao" class="detalhes-viagem">
-                    <h3>Prepare-se para uma viagem imersiva em Jalapão!</h3>
-                    <p>Com base na vontade e curiosidade da nossa Comunidade estaremos fazendo nossa primeira viagem
-                        para o Jalapão.</p>
-                    <p><strong>Para datas exatas e detalhes do novo roteiro</strong></p>
-                    <p> <a href="Quero_Viajar.html" class="link-quero-viajar">Clique Aqui!</a></p>
-                </div>
-            </div>
-
-
-            
-                <div class="img-overlay">
-                    Em Breve
-                </div>
-                <div class="content">
-                    <h2>Jalapão</h2>
-                    <p class="subtitle">Aventura e Renascimento no Coração do Brasil!</p>
-                    <p>Setembro/2025</p>
-                    <button disabled>Em Breve</button>
-                </div>
-                
+        <!-- Seção Final de Lista de Espera -->
+        <div class="lista-espera-section">
+            <h2>Entre para a lista de espera das viagens mais desejadas de 2026.</h2>
+            <p>Receba abertura antecipada, prioridade nas vagas e condições especiais.</p>
+            <a href="https://api.whatsapp.com/send/?phone=556195109211" class="botao-espera">👉 Entrar para a lista de espera</a>
         </div>
-        -->
+    </section>
 
-        <footer class="rodape">
-            <div class="rodape-conteudo">
-                <p>&copy; 2025 Destinos Delas ® <br> Cadastrur: 33.051.894.0001-06 | Brasília/DF</p>
-                <div class="redes-sociais">
-                    <a href="https://api.whatsapp.com/send/?phone=556195109211&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKomk1leHRuA2FlbQIxMAABp3bjokME7H6Dt5z-pnX3zi9ZnXSh-fK72OedSqUTqEo4JOXWRW9OAj7st68__aem_2taL6wrGZSwbhSf1gGqQlw"
-                        target="_blank" aria-label="Entre em contato pelo WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/destinosdelas?igsh=MTc1cWxpdmNtNGZlYg==" target="_blank"
-                        aria-label="Siga-nos no Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://share.google/OERnMwOimnkWq1U1Z" target="_blank" aria-label="Veja no Google">
-                        <i class="fab fa-google"></i>
-                    </a>
-                </div>
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2025 Destinos Delas ® <br> Cadastrur: 33.051.894.0001-06 | Brasília/DF</p>
+            <div class="redes-sociais">
+                <a href="https://api.whatsapp.com/send/?phone=556195109211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/destinosdelas" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://share.google/OERnMwOimnkWq1U1Z" target="_blank"><i class="fab fa-google"></i></a>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-
-        <script src="script.js"></script>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
