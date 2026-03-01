@@ -313,22 +313,55 @@ body {
     color: var(--cor-texto-principal);
 }
 
+/* Container de introdução com fundo preto */
+.timeline-intro-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 25px;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+
 .timeline-section h2 {
     font-size: 2.5rem;
-    color: var(--cor-terciaria);
+    color: white;
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body.pagina-sobre .timeline-section h2 {
+    color: white;
 }
 
 .timeline-section p {
     max-width: 600px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     color: var(--cor-secundaria);
     font-weight: 600;
     font-size: 1.1rem;
     text-align: center;
+}
+
+body.pagina-sobre .timeline-section p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-intro-sub {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline-intro-sub p {
+    margin: 5px auto;
+    font-style: italic;
+    color: var(--cor-quinto);
+}
+
+body.pagina-sobre .timeline-intro-sub p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Timeline container */
@@ -340,6 +373,11 @@ body {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     box-shadow: var(--shadow-timeline);
+}
+
+body.pagina-sobre .timeline {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Gradient line behind timeline */
@@ -469,19 +507,70 @@ body {
 
 .timeline-content h3 {
     margin-top: 0;
-    color: var(--cor-quaternaria);
+    color: #000000 !important;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
     letter-spacing: 0.03em;
     user-select: text;
+    position: relative;
+    z-index: 2;
 }
 
 .timeline-content p {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 1rem;
-    color: var(--cor-texto-card-link);
+    color: #000000 !important;
     user-select: text;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    text-shadow: none !important;
+}
+
+.timeline-action {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Listas dentro da Timeline */
+.lista-check-timeline, .lista-hifen-timeline {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.lista-check-timeline li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.lista-check-timeline i {
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+}
+
+.lista-hifen-timeline li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.lista-hifen-timeline li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--cor-terciaria);
 }
 
 
@@ -771,31 +860,32 @@ body {
 
 /* SEÇÃO "CHAMADA PARA COMUNIDADE" (QUERO_VIAJAR.HTML) */
 .community-callout {
-    background-color: #fde7eb;
-    /* Um tom mais claro da sua paleta */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 60px 20px;
     text-align: center;
     margin-top: 40px;
     /* Espaço acima da seção */
-    border-top: 1px solid var(--cor-terciaria);
-    border-bottom: 1px solid var(--cor-terciaria);
-    color: var(--cor-texto-principal);
+    border-top: none;
+    border-bottom: none;
+    color: white;
     font-size: 1.1em;
 }
 
 .community-callout h2 {
     font-size: 2.5em;
-    color: var(--cor-terciaria);
+    color: white;
     margin-top: 15px;
     margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(176, 58, 46, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .community-callout p {
     max-width: 600px;
     margin: 0 auto 20px auto;
     line-height: 1.8;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .community-button {
