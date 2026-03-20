@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinos Delas - Viagens</title>
+    <title>Quero Viajar - Destinos Delas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,8 +12,7 @@
 <body>
     <header class="topo">
         <div class="logo">
-            <a href="Inicial.html"></a>
-            <a href="/Inicial.html"><img src="/Imagens/logo destinos  sem fundo -05 (4).png" alt="Destino Delas"></a>
+            <a href="Inicial.html"><img src="Imagens/logo destinos  sem fundo -05 (4).png" alt="Destino Delas"></a>
         </div>
 
         <!-- Botão de menu -->
@@ -29,129 +28,116 @@
         <nav class="menu" id="side-menu">
             <ul>
                 <li><a href="index.html">Sobre</a></li>
-                <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Viagens.html">Viagens</a></li>
+                <li><a href="Como_funciona.html">Como Funciona</a></li>
                 <li><a href="Depoimentos.html">Elas disseram</a></li>
                 <li><a class="quero-viajar" href="Quero_Viajar.html">Quero Viajar</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-content">
-        <div class="header-section">
-            <h1>Nossos próximos destinos</h1>
-        </div>
+    <main class="main-content">
+        <section class="secao-quero-viajar">
+            <div class="container">
+                <h1>Pronta para viver sua próxima virada?</h1>
+                <p class="secao-intro-quero-viajar">Preencha o formulário abaixo e nossa equipe entrará em contato com você em breve.</p>
 
-        <div class="destinos-container">
+                <div class="formulario-container">
+                    <form class="formulario-quero-viajar" id="formQueroViajar">
+                        <div class="form-group">
+                            <label for="nome">Seu nome *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Como você gosta de ser chamada?">
+                        </div>
 
-            <div class="destino-card">
-                <div class="badge">12 Vagas</div>
-                <img src="/Imagens/chapada-dos-veadeiros-brasilia-capa1-820x458.jpg" alt="Chapada dos Veadeiros">
-                <div class="content">
-                    <h2>Chapada dos Veadeiros</h2>
-                    <p>Novembro/2025</p>
-                    <p>5 Dias de Viagens</p>
-                    <a href="/Imagens/DD  CHAPADA DOS VEADEIROS  NOV25.pdf.pdf" target="_blank" class="botao-pdf">Quero saber mais</a>
-                    <a href="https://wa.me/556195109211?text=Olá%2C%20Quero%20Viajar%20para%20Chapada%20dos%20Veadeiros"
-                        target="_blank" class="community-button">QUERO VIAJAR</a>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp *</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(XX) 9XXXX-XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destino">Qual destino te chama? *</label>
+                            <select id="destino" name="destino" required>
+                                <option value="">Escolha um destino</option>
+                                <option value="itacare">Itacaré (BA) - Fevereiro 2026</option>
+                                <option value="buenos-aires">Buenos Aires + Uruguai - Março 2026</option>
+                                <option value="chapada-abril">Chapada dos Veadeiros - Abril 2026</option>
+                                <option value="jalapao">Jalapão (TO) - Maio 2026</option>
+                                <option value="peru">Peru - Junho 2026</option>
+                                <option value="lencois">Lençóis Maranhenses - Julho 2026</option>
+                                <option value="ilhabela">Ilhabela (Baleias) - Agosto 2026</option>
+                                <option value="eurotrip">Eurotrip Delas - Setembro 2026</option>
+                                <option value="amazonia">Amazônia - Outubro 2026</option>
+                                <option value="chapada-novembro">Chapada dos Veadeiros - Novembro 2026</option>
+                                <option value="nao-sei">Ainda não decidi</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivacao">O que te move a viajar agora? *</label>
+                            <textarea id="motivacao" name="motivacao" required placeholder="Conte-nos um pouco sobre o que te traz até aqui..." rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="comunidade" value="sim"> Quero receber as próximas aberturas e novidades da comunidade
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">Enviar interesse</button>
+                    </form>
+                </div>
+
+                <div class="info-formulario">
+                    <p><strong>💬 Preferência por WhatsApp?</strong></p>
+                    <p>Você também pode entrar em contato direto com a gente pelo <a href="https://api.whatsapp.com/send/?phone=556195109211" target="_blank">WhatsApp</a>. Adoramos conversar!</p>
                 </div>
             </div>
+        </section>
 
-            
-
-            <div class="destino-card">
-                <div class="badge_esgotada">Vagas Esgotadas</div>
-                <img src="/Imagens/Buenos Aieres.jpg" alt="Buenos Aieres + Uruguai">
-                <div class="content">
-                    <h2>Buenos Aires + Uruguai</h2>
-                    <p>Novembro/2025</p>
-                    <p>4 Dias de Viagens</p>
-                    <a href="/Imagens/DD  Buenos Aires + Uruguai25.pdf" target="_blank" class="botao-pdf">Quero saber mais</a>
-                    <a href="https://wa.me/556195109211?text=Olá%2C%20Quero%20Viajar%20para%20Buenos%20Aieres%20e%20Uruguai"
-                        target="_blank" class="community-button">QUERO VIAJAR</a>
-                </div>
+        <!-- SEÇÃO FINAL: Comunidade -->
+        <section class="secao-comunidade-final">
+            <div class="container">
+                <h2>Entre para a comunidade Destinos Delas</h2>
+                <p>Receba as próximas aberturas, dicas de viagem, histórias de outras mulheres e muito mais.</p>
+                <a href="https://api.whatsapp.com/send/?phone=556195109211" class="btn btn-primary btn-large">Entrar na comunidade</a>
             </div>
+        </section>
+    </main>
 
-            <div class="destino-card">
-                <div class="badge">7 Vagas</div>
-                <img src="/Imagens/Salvador_cidade.jpg" alt="Salvador + Morro de SP">
-                <div class="content">
-                    <h2>Salvador + Morro de SP</h2>
-                    <p>Dezembro/2025</p>
-                    <p>5 Dias de Viagens</p>
-                    <a href="/Imagens/DD  SALVADOR + MORRO DE SP  DEZ25.pdf" target="_blank" class="botao-pdf">Quero saber mais</a>
-                    <a href="https://wa.me/556195109211?text=Olá%2C%20Quero%20Viajar%20para%20Salvador%20e%20Morro%20de%20SP"
-                        target="_blank" class="community-button">QUERO VIAJAR</a>
-                </div>
-            </div>
-
-            
-
-            <!--
-            <div class="destino-card">
-                <div class="badge">15 Vagas</div>
-                <img src="/Imagens/jalapao.jpg" alt="Jalapão">
-                <div class="content">
-                    <h2>Jalapão</h2>
-                    <br>
-                    <p>Setembro/2025</p>
-                    <p>5 Dias de Viagens</p>
-                    <a href="/Imagens/DD  JALAPÃO  OUT25.pdf" target="_blank" class="botao-pdf">Quero saber mais</a>
-                    <a href="https://wa.me/556195109211?text=Olá%2C%20Quero%20Viajar%20para%20o%20Jalapão%20com%20vocês"
-                        target="_blank" class="community-button">QUERO VIAJAR</a>
-                     <a href="" class="community-button">EM BREVE</a> 
-                </div>
-            </div>
-            -->
-            <!---
-                <div class="destino-card">
-                    <div class="img-overlay">
-                        Em Breve
-                    </div>
-                    <div class="content">
-                        <h2>Morro de SP + Salvador</h2>
-                        <p>Dezembro/2025</p>
-                        <button disabled>Em Breve</button>
-                    </div>
-                </div>
-            -->
-
-        </div>
-    </div>
-
-
-    </div>
-    <section class="community-callout">
-        <p>Não encontrou a viagem que queria?</p>
-        <h2>Junte-se à nossa comunidade!</h2>
-        <p>Acompanhe as próximas viagens e compartilhe suas ideias com outras viajantes.</p>
-        <a href="https://chat.whatsapp.com/DDGx9Z06UM9BDrThxVDOlC?fbclid=PAQ0xDSwKohttleHRuA2FlbQIxMAABp62Zdlil5XDChapp0zhxp-FMvEiWFm0HOrbJSmGtY6_Y2OFUjtY2Ln9imOhA_aem_Q7qN8EoSlDgxJv8cHVEmdw"
-            target="_blank" class="community-button">Entrar na Comunidade</a>
-    </section>
-    </div>
     <footer class="rodape">
         <div class="rodape-conteudo">
             <p>&copy; 2025 Destinos Delas ® <br> Cadastrur: 33.051.894.0001-06 | Brasília/DF</p>
             <div class="redes-sociais">
-                <a href="https://api.whatsapp.com/send/?phone=556195109211&text&type=phone_number&app_absent=0&wame_ctl=1&fbclid=PAQ0xDSwKomk1leHRuA2FlbQIxMAABp3bjokME7H6Dt5z-pnX3zi9ZnXSh-fK72OedSqUTqEo4JOXWRW9OAj7st68__aem_2taL6wrGZSwbhSf1gGqQlw"
-                    target="_blank" aria-label="Entre em contato pelo WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/destinosdelas?igsh=MTc1cWxpdmNtNGZlYg==" target="_blank"
-                    aria-label="Siga-nos no Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://share.google/OERnMwOimnkWq1U1Z" target="_blank" aria-label="Veja no Google">
-                    <i class="fab fa-google"></i>
-                </a>
+                <a href="https://api.whatsapp.com/send/?phone=556195109211" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/destinosdelas" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://share.google/OERnMwOimnkWq1U1Z" target="_blank"><i class="fab fa-google"></i></a>
             </div>
         </div>
     </footer>
 
-
     <script src="script.js"></script>
-
-
+    <script>
+        // Enviar formulário via WhatsApp
+        document.getElementById('formQueroViajar').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const destino = document.getElementById('destino').value;
+            const motivacao = document.getElementById('motivacao').value;
+            
+            const mensagem = `Olá! Meu nome é ${nome}. Estou interessada em viajar com a Destinos Delas. Destino de interesse: ${destino}. Motivação: ${motivacao}. Meu email é: ${email}`;
+            
+            const urlWhatsApp = `https://api.whatsapp.com/send/?phone=556195109211&text=${encodeURIComponent(mensagem)}`;
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
 </body>
 
 </html>
